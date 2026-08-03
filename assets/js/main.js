@@ -12,7 +12,7 @@ const translations = {
     intro_text: "La Perla del Born es un espacio único en el barrio más auténtico de Barcelona. Te ofrecemos el local en exclusiva para tu equipo o tus clientes más especiales, con espectáculo de flamenco en vivo, cena, y una experiencia que no olvidarán.",
 
     espacio_label: "El espacio",
-    espacio_title: "El Born. Solo para vosotros.",
+    espacio_title: "La Perla del Born. Solo para vosotros.",
 
     incluye_label: "El pack",
     incluye_title: "Todo lo que necesitas, en un solo lugar",
@@ -108,7 +108,7 @@ const translations = {
     intro_text: "La Perla del Born is a unique space in Barcelona's most authentic neighbourhood. We offer exclusive venue hire for your team or most valued clients, with a live flamenco show, dinner, and an experience they will never forget.",
 
     espacio_label: "The venue",
-    espacio_title: "El Born. Just for you.",
+    espacio_title: "La Perla del Born. Just for you.",
 
     incluye_label: "The package",
     incluye_title: "Everything you need, in one place",
@@ -203,7 +203,7 @@ const translations = {
     intro_text: "La Perla del Born és un espai únic al barri més autèntic de Barcelona. T'oferim el local en exclusiva per al teu equip o els teus clients més especials, amb espectacle de flamenc en directe, sopar, i una experiència que no oblidaran.",
 
     espacio_label: "L'espai",
-    espacio_title: "El Born. Només per a vosaltres.",
+    espacio_title: "La Perla del Born. Només per a vosaltres.",
 
     incluye_label: "El paquet",
     incluye_title: "Tot el que necessites, en un sol lloc",
