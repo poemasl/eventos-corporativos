@@ -84,6 +84,8 @@ const translations = {
     ],
 
     menu_nota: "Menú sujeto a disponibilidad de temporada. Podemos adaptar el menú a intolerancias o requerimientos especiales.",
+    menu_download: "Descargar menú completo (PDF)",
+    menu_download: "Descargar menú completo (PDF)",
 
     precio_label: "El precio",
     precio_pp: "por persona",
@@ -178,6 +180,7 @@ const translations = {
     ],
 
     menu_nota: "Menu subject to seasonal availability. We can adapt to dietary requirements or intolerances.",
+    menu_download: "Download full menu (PDF)",
 
     precio_label: "Pricing",
     precio_pp: "per person",
@@ -272,6 +275,7 @@ const translations = {
     ],
 
     menu_nota: "Menú subjecte a disponibilitat de temporada. Podem adaptar el menú a intoleràncies o requeriments especials.",
+    menu_download: "Descarregar menú complet (PDF)",
 
     precio_label: "El preu",
     precio_pp: "per persona",
