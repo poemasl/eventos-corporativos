@@ -328,11 +328,24 @@ body {
   padding-top: 24px;
 }
 
-.pack-icon {
-  color: var(--gold);
-  font-size: 6px;
+.pack-img-wrap {
+  overflow: hidden;
+  aspect-ratio: 4/3;
   margin-bottom: 16px;
-  letter-spacing: 4px;
+  border-radius: 2px;
+}
+
+.pack-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.85) saturate(0.8);
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.pack-img-wrap img:hover {
+  transform: scale(1.04);
+  filter: brightness(1) saturate(1);
 }
 
 .pack-item h3 {
