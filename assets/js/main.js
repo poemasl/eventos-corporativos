@@ -24,10 +24,10 @@ const translations = {
     pack_show_text: "1 hora de espectáculo en vivo: Born Flamenco o Barcelona Guitar Trio & Dance — Homenaje a Paco de Lucía.",
 
     pack_cena_title: "Cena",
-    pack_cena_text: "Menú de cena completo diseñado por nuestro equipo, servido durante o después del espectáculo según preferencia.",
+    pack_cena_text: "Menú de cena completo diseñado por nuestro equipo, servido antes o después del espectáculo según preferencia.",
 
     pack_coctel_title: "Cóctel de bienvenida",
-    pack_coctel_text: "Recepción con copa de bienvenida para empezar la noche con el tono perfecto.",
+    pack_coctel_text: "Recepción con copa de bienvenida para empezar la velada con el tono perfecto.",
 
     pack_clase_title: "Clase de flamenco",
     pack_clase_text: "Clase personalizada de 1 hora en español o inglés. Una experiencia participativa para romper el hielo y conectar al equipo.",
@@ -118,7 +118,7 @@ const translations = {
     pack_show_text: "1-hour live performance: Born Flamenco or Barcelona Guitar Trio & Dance — Tribute to Paco de Lucía.",
 
     pack_cena_title: "Dinner",
-    pack_cena_text: "A full dinner menu crafted by our team, served during or after the show according to your preference.",
+    pack_cena_text: "A full dinner menu crafted by our team, served before or after the show according to your preference.",
 
     pack_coctel_title: "Welcome cocktail",
     pack_coctel_text: "Reception with a welcome drink to set the perfect tone for the evening.",
@@ -212,7 +212,7 @@ const translations = {
     pack_show_text: "1 hora d'espectacle en directe: Born Flamenco o Barcelona Guitar Trio & Dance — Homenatge a Paco de Lucía.",
 
     pack_cena_title: "Sopar",
-    pack_cena_text: "Menú de sopar complet dissenyat pel nostre equip, servit durant o després de l'espectacle segons preferència.",
+    pack_cena_text: "Menú de sopar complet dissenyat pel nostre equip, servit abans o després de l'espectacle segons preferència.",
 
     pack_coctel_title: "Còctel de benvinguda",
     pack_coctel_text: "Recepció amb copa de benvinguda per començar la nit amb el to perfecte.",
