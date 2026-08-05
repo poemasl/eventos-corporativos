@@ -743,9 +743,12 @@ body {
   }
   .menu-photos {
     flex-direction: row;
+    gap: 6px;
   }
   .menu-photos img {
     width: 33%;
+    aspect-ratio: 1;
+    flex: none;
   }
   .menu-cols {
     grid-template-columns: repeat(2, 1fr);
