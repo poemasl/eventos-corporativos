@@ -368,4 +368,13 @@ const revealObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
 // ── Init ──
+const urlParams = new URLSearchParams(window.location.search);
+const langParam = urlParams.get('lang');
+if (langParam && translations[langParam]) {
+  currentLang = langParam;
+  document.querySelectorAll('.lang-btn').forEach(b => {
+    b.classList.toggle('active', b.getAttribute('data-lang') === currentLang);
+  });
+  document.documentElement.lang = currentLang;
+}
 applyTranslations(currentLang);
