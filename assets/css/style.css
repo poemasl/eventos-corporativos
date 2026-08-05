@@ -425,9 +425,9 @@ body {
 
 .menu-layout {
   display: grid;
-  grid-template-columns: 120px 1fr;
+  grid-template-columns: 160px 1fr;
   gap: 20px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .menu-content {
@@ -437,14 +437,14 @@ body {
 .menu-photos {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 6px;
 }
 
 .menu-photos img {
   width: 100%;
   border-radius: 4px;
   object-fit: cover;
-  aspect-ratio: 4/3;
+  flex: 1;
   filter: brightness(0.9) saturate(0.85);
   transition: filter 0.4s ease;
 }
