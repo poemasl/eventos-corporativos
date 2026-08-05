@@ -26,7 +26,7 @@ const translations = {
     pack_cena_title: "Cena",
     pack_cena_text: "Menú de cena completo diseñado por nuestro equipo, servido antes o después del espectáculo según preferencia.",
 
-    pack_coctel_title: "Cóctel de bienvenida",
+    pack_coctel_title: "Copa de bienvenida",
     pack_coctel_text: "Recepción con copa de bienvenida para empezar la velada con el tono perfecto.",
 
     pack_clase_title: "Clase de flamenco",
@@ -90,7 +90,7 @@ const translations = {
     precio_label: "El precio",
     precio_pp: "por persona",
     precio_title: "Distintos packs adaptados a tu evento",
-    precio_incluye: "Espacio en exclusiva · Espectáculo de flamenco 1h · Cena completa · Cóctel de bienvenida",
+    precio_incluye: "Espacio en exclusiva · Espectáculo de flamenco 1h · Cena completa · Copa de bienvenida",
     precio_nota: "Capacidad hasta 100 personas · Distintos packs según formato · Consulta disponibilidad",
     precio_cta: "Pedir presupuesto personalizado",
 
@@ -131,7 +131,7 @@ const translations = {
     pack_cena_title: "Dinner",
     pack_cena_text: "A full dinner menu crafted by our team, served before or after the show according to your preference.",
 
-    pack_coctel_title: "Welcome cocktail",
+    pack_coctel_title: "Welcome drink",
     pack_coctel_text: "Reception with a welcome drink to set the perfect tone for the evening.",
 
     pack_clase_title: "Flamenco class",
@@ -194,7 +194,7 @@ const translations = {
     precio_label: "Pricing",
     precio_pp: "per person",
     precio_title: "Several packages tailored to your event",
-    precio_incluye: "Exclusive venue · 1h live flamenco show · Full dinner · Welcome cocktail",
+    precio_incluye: "Exclusive venue · 1h live flamenco show · Full dinner · Welcome drink",
     precio_nota: "Capacity up to 100 guests · Several packages depending on format · Check availability",
     precio_cta: "Request a personalised quote",
 
@@ -235,8 +235,8 @@ const translations = {
     pack_cena_title: "Sopar",
     pack_cena_text: "Menú de sopar complet dissenyat pel nostre equip, servit abans o després de l'espectacle segons preferència.",
 
-    pack_coctel_title: "Còctel de benvinguda",
-    pack_coctel_text: "Recepció amb copa de benvinguda per començar la nit amb el to perfecte.",
+    pack_coctel_title: "Copa de benvinguda",
+    pack_coctel_text: "Recepció amb copa de benvinguda per començar la vetllada amb el to perfecte.",
 
     pack_clase_title: "Classe de flamenc",
     pack_clase_text: "Classe personalitzada d'1 hora en castellà o anglès. Una experiència participativa per trencar el gel i connectar l'equip.",
@@ -298,7 +298,7 @@ const translations = {
     precio_label: "El preu",
     precio_pp: "per persona",
     precio_title: "Diversos packs adaptats al teu esdeveniment",
-    precio_incluye: "Espai en exclusiva · Espectacle de flamenc 1h · Sopar complet · Còctel de benvinguda",
+    precio_incluye: "Espai en exclusiva · Espectacle de flamenc 1h · Sopar complet · Copa de benvinguda",
     precio_nota: "Capacitat fins a 100 persones · Diversos packs segons format · Consulta disponibilitat",
     precio_cta: "Demanar pressupost personalitzat",
 
