@@ -425,8 +425,8 @@ body {
 
 .menu-layout {
   display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: 32px;
+  grid-template-columns: 80px 1fr;
+  gap: 20px;
   align-items: start;
 }
 
