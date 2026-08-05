@@ -91,7 +91,7 @@ const translations = {
     precio_pp: "por persona",
     precio_title: "Distintos packs adaptados a tu evento",
     precio_incluye: "Espacio en exclusiva · Espectáculo de flamenco 1h · Cena completa · Cóctel de bienvenida",
-    precio_nota: "Consulta disponibilidad y personalización · Grupos a partir de 25 personas",
+    precio_nota: "Capacidad hasta 100 personas · Distintos packs según formato · Consulta disponibilidad",
     precio_cta: "Pedir presupuesto personalizado",
 
     contacto_label: "Hablemos",
@@ -186,7 +186,7 @@ const translations = {
     precio_pp: "per person",
     precio_title: "Several packages tailored to your event",
     precio_incluye: "Exclusive venue · 1h live flamenco show · Full dinner · Welcome cocktail",
-    precio_nota: "Check availability and customisation · Groups from 25 people",
+    precio_nota: "Capacity up to 100 guests · Several packages depending on format · Check availability",
     precio_cta: "Request a personalised quote",
 
     contacto_label: "Get in touch",
@@ -281,7 +281,7 @@ const translations = {
     precio_pp: "per persona",
     precio_title: "Diversos packs adaptats al teu esdeveniment",
     precio_incluye: "Espai en exclusiva · Espectacle de flamenc 1h · Sopar complet · Còctel de benvinguda",
-    precio_nota: "Consulta disponibilitat i personalització · Grups a partir de 25 persones",
+    precio_nota: "Capacitat fins a 100 persones · Diversos packs segons format · Consulta disponibilitat",
     precio_cta: "Demanar pressupost personalitzat",
 
     contacto_label: "Parlem",
