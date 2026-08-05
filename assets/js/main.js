@@ -97,6 +97,15 @@ const translations = {
     contacto_label: "Hablemos",
     contacto_title: "Cuéntanos tu idea",
     contacto_text: "Cada evento es diferente. Dinos qué tienes en mente y te preparamos una propuesta a medida.",
+
+    videos_label: "En vivo",
+    videos_title: "Vive la experiencia",
+    local_label: "El recinto",
+    local_title: "Un espacio con personalidad",
+    reviews_label: "Opiniones",
+    reviews_title: "Lo que dicen de nosotros",
+    reviews_text: "Más de 100 reseñas en Google Maps con la máxima puntuación. Nuestros clientes valoran la calidad artística, el trato personalizado y la atmósfera única del espacio.",
+    reviews_cta: "Ver todas las reseñas",
   },
 
   en: {
@@ -192,6 +201,15 @@ const translations = {
     contacto_label: "Get in touch",
     contacto_title: "Tell us your idea",
     contacto_text: "Every event is different. Tell us what you have in mind and we will prepare a tailored proposal for you.",
+
+    videos_label: "Live",
+    videos_title: "Feel the experience",
+    local_label: "The venue",
+    local_title: "A space with personality",
+    reviews_label: "Reviews",
+    reviews_title: "What our guests say",
+    reviews_text: "Over 100 Google Maps reviews with top ratings. Our guests value the artistic quality, personalised service and the unique atmosphere of the space.",
+    reviews_cta: "See all reviews",
   },
 
   ca: {
@@ -287,6 +305,15 @@ const translations = {
     contacto_label: "Parlem",
     contacto_title: "Explica'ns la teva idea",
     contacto_text: "Cada esdeveniment és diferent. Digues-nos què tens en ment i et preparem una proposta a mida.",
+
+    videos_label: "En directe",
+    videos_title: "Viu l'experiència",
+    local_label: "El recinte",
+    local_title: "Un espai amb personalitat",
+    reviews_label: "Opinions",
+    reviews_title: "El que diuen de nosaltres",
+    reviews_text: "Més de 100 ressenyes a Google Maps amb la màxima puntuació. Els nostres clients valoren la qualitat artística, el tracte personalitzat i l'atmosfera única de l'espai.",
+    reviews_cta: "Veure totes les ressenyes",
   }
 };
 
