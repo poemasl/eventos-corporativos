@@ -45,45 +45,39 @@ const translations = {
     menu_label: "La mesa",
     menu_title: "El menú",
 
-    menu_cat_aperitivos: "Aperitivos",
-    menu_cat_primeros: "Primeros",
-    menu_cat_segundos: "Segundos",
-    menu_cat_postres: "Postres",
+    menu_cat_aperitivos: "Para compartir",
+    menu_cat_primeros: "Plato principal",
+    menu_cat_segundos: "Postre",
+    menu_cat_postres: "",
     menu_cat_bebidas: "Bebidas",
 
     aperitivos: [
-      "Pan con tomate y aceite virgen extra",
-      "Croquetas caseras",
-      "Ensaladilla rusa con atún",
-      "Patatas bravas",
-      "Jamón ibérico"
+      "Pan de pagés con tomate de colgar, ajo y aceite de oliva virgen extra",
+      "Tortilla española de patatas",
+      "Chips caseras",
+      "Selección de aceitunas",
+      "Jamón ibérico",
+      "Anchoas del Cantábrico"
     ],
     primeros: [
-      "Gazpacho andaluz",
-      "Ensalada mediterránea",
-      "Carpaccio de ternera",
-      "Tartar de salmón"
+      "Ternera a la jardinera, elaborada con ternera gallega, verduras de temporada y salsa cazadora tradicional",
+      "ó",
+      "Paella de verduras (opción vegetariana)"
     ],
     segundos: [
-      "Lubina al horno con patatas",
-      "Magret de pato con naranja",
-      "Solomillo a la plancha",
-      "Risotto de setas (vegetariano)"
+      "Tarta Larpeira, tradicional bizcocho gallego, acompañada de chocolate fundido y crema de whisky",
+      "Tarta de hojaldre con crema de yogur y frambuesas",
+      "Yogur cremoso con mermelada de frutos rojos y hojas de menta fresca"
     ],
-    postres: [
-      "Crema catalana",
-      "Tarta de queso",
-      "Coulant de chocolate",
-      "Selección de sorbetes"
-    ],
+    postres: [],
     bebidas: [
-      "Vino tinto / blanco / rosado",
-      "Agua mineral",
-      "Refrescos",
-      "Café e infusiones"
+      "Agua / Agua con gas",
+      "Cervezas",
+      "Vino tinto Rioja",
+      "Vino blanco"
     ],
 
-    menu_nota: "Menú sujeto a disponibilidad de temporada. Podemos adaptar el menú a intolerancias o requerimientos especiales.",
+    menu_nota: "Plato principal y postre a elegir previamente. Menú sujeto a disponibilidad de temporada. Podemos adaptar a intolerancias o requerimientos especiales.",
     menu_download: "Descargar menú completo (PDF)",
     menu_download: "Descargar menú completo (PDF)",
 
@@ -150,45 +144,39 @@ const translations = {
     menu_label: "The table",
     menu_title: "The menu",
 
-    menu_cat_aperitivos: "Starters",
-    menu_cat_primeros: "First courses",
-    menu_cat_segundos: "Main courses",
-    menu_cat_postres: "Desserts",
+    menu_cat_aperitivos: "To share",
+    menu_cat_primeros: "Main course",
+    menu_cat_segundos: "Dessert",
+    menu_cat_postres: "",
     menu_cat_bebidas: "Drinks",
 
     aperitivos: [
-      "Bread with tomato and extra virgin olive oil",
-      "Homemade croquettes",
-      "Russian salad with tuna",
-      "Patatas bravas",
-      "Iberian ham"
+      "Country bread with hanging tomato, garlic and extra virgin olive oil",
+      "Spanish potato omelette",
+      "Homemade crisps",
+      "Olive selection",
+      "Iberian ham",
+      "Cantabrian anchovies"
     ],
     primeros: [
-      "Andalusian gazpacho",
-      "Mediterranean salad",
-      "Beef carpaccio",
-      "Salmon tartare"
+      "Beef jardinera, made with Galician beef, seasonal vegetables and traditional hunter's sauce",
+      "or",
+      "Vegetable paella (vegetarian option)"
     ],
     segundos: [
-      "Oven-baked sea bass with potatoes",
-      "Duck magret with orange",
-      "Grilled sirloin steak",
-      "Mushroom risotto (vegetarian)"
+      "Tarta Larpeira, traditional Galician sponge cake with melted chocolate and whisky cream",
+      "Puff pastry tart with yoghurt cream and raspberries",
+      "Creamy yoghurt with red berry jam and fresh mint leaves"
     ],
-    postres: [
-      "Crema catalana",
-      "Cheesecake",
-      "Chocolate fondant",
-      "Sorbet selection"
-    ],
+    postres: [],
     bebidas: [
-      "Red / white / rosé wine",
-      "Still water",
-      "Soft drinks",
-      "Coffee and herbal teas"
+      "Water / Sparkling water",
+      "Beers",
+      "Rioja red wine",
+      "White wine"
     ],
 
-    menu_nota: "Menu subject to seasonal availability. We can adapt to dietary requirements or intolerances.",
+    menu_nota: "Main course and dessert to be chosen in advance. Menu subject to seasonal availability. We can adapt to dietary requirements or intolerances.",
     menu_download: "Download full menu (PDF)",
 
     precio_label: "Pricing",
@@ -254,45 +242,39 @@ const translations = {
     menu_label: "La taula",
     menu_title: "El menú",
 
-    menu_cat_aperitivos: "Aperitius",
-    menu_cat_primeros: "Primers",
-    menu_cat_segundos: "Segons",
-    menu_cat_postres: "Postres",
+    menu_cat_aperitivos: "Per compartir",
+    menu_cat_primeros: "Plat principal",
+    menu_cat_segundos: "Postres",
+    menu_cat_postres: "",
     menu_cat_bebidas: "Begudes",
 
     aperitivos: [
-      "Pa amb tomàquet i oli d'oliva verge extra",
-      "Croquetes casolanes",
-      "Amanida russa amb tonyina",
-      "Patates braves",
-      "Pernil ibèric"
+      "Pa de pagès amb tomàquet de penjar, all i oli d'oliva verge extra",
+      "Truita espanyola de patates",
+      "Xips casolanes",
+      "Selecció d'olives",
+      "Pernil ibèric",
+      "Anxoves del Cantàbric"
     ],
     primeros: [
-      "Gaspatxo andalús",
-      "Amanida mediterrània",
-      "Carpaccio de vedella",
-      "Tàrtar de salmó"
+      "Vedella a la jardinera, elaborada amb vedella gallega, verdures de temporada i salsa caçadora tradicional",
+      "o",
+      "Paella de verdures (opció vegetariana)"
     ],
     segundos: [
-      "Llobarro al forn amb patates",
-      "Magret d'ànec amb taronja",
-      "Filet a la planxa",
-      "Risotto de bolets (vegetarià)"
+      "Tarta Larpeira, tradicional pa de pessic gallec amb xocolata fosa i crema de whisky",
+      "Tarta de full amb crema de iogurt i gerds",
+      "Iogurt cremós amb melmelada de fruits vermells i fulles de menta fresca"
     ],
-    postres: [
-      "Crema catalana",
-      "Pastís de formatge",
-      "Coulant de xocolata",
-      "Selecció de sorbets"
-    ],
+    postres: [],
     bebidas: [
-      "Vi negre / blanc / rosat",
-      "Aigua mineral",
-      "Refrescos",
-      "Cafè i infusions"
+      "Aigua / Aigua amb gas",
+      "Cerveses",
+      "Vi negre Rioja",
+      "Vi blanc"
     ],
 
-    menu_nota: "Menú subjecte a disponibilitat de temporada. Podem adaptar el menú a intoleràncies o requeriments especials.",
+    menu_nota: "Plat principal i postres a escollir prèviament. Menú subjecte a disponibilitat de temporada. Podem adaptar a intoleràncies o requeriments especials.",
     menu_download: "Descarregar menú complet (PDF)",
 
     precio_label: "El preu",
@@ -366,6 +348,16 @@ const revealObserver = new IntersectionObserver((entries) => {
 });
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// ── Back to top ──
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 600) {
+    backToTop.classList.add('visible');
+  } else {
+    backToTop.classList.remove('visible');
+  }
+});
 
 // ── Init ──
 const urlParams = new URLSearchParams(window.location.search);
