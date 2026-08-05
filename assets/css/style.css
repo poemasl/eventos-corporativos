@@ -453,6 +453,26 @@ body {
   filter: brightness(1) saturate(1);
 }
 
+.menu-photos-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.menu-photos-row img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 4px;
+  filter: brightness(0.9) saturate(0.85);
+  transition: filter 0.4s ease;
+}
+
+.menu-photos-row img:hover {
+  filter: brightness(1) saturate(1);
+}
+
 .menu-cols {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
