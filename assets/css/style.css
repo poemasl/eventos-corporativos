@@ -612,6 +612,122 @@ body {
   line-height: 1.8;
 }
 
+.reviews-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+  text-align: left;
+}
+
+.review-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(201, 168, 76, 0.15);
+  border-radius: 4px;
+  padding: 24px;
+}
+
+.review-preview {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--white-dim);
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.review-full {
+  margin-bottom: 12px;
+}
+
+.review-full p {
+  font-size: 0.85rem;
+  color: var(--white-dim);
+  line-height: 1.8;
+}
+
+.review-toggle {
+  background: none;
+  border: none;
+  color: var(--gold);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 12px;
+}
+
+.review-toggle:hover {
+  color: var(--gold-light);
+}
+
+.review-author {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: var(--gold);
+  font-weight: 400;
+}
+
+.reviews-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+  text-align: left;
+}
+
+.review-card {
+  background: rgba(201, 168, 76, 0.05);
+  border: 1px solid rgba(201, 168, 76, 0.15);
+  border-radius: 6px;
+  padding: 24px;
+}
+
+.review-preview {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--white-dim);
+  line-height: 1.7;
+  margin: 0 0 12px;
+}
+
+.review-full p {
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  color: var(--white-dim);
+  line-height: 1.7;
+  margin: 12px 0;
+}
+
+.review-toggle {
+  background: none;
+  border: none;
+  color: var(--gold);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  padding: 4px 0;
+  text-transform: uppercase;
+}
+
+.review-toggle:hover {
+  color: var(--gold-light);
+}
+
+.review-author {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--gold);
+  margin-top: 12px;
+}
+
 /* ── PRECIO ── */
 .precio {
   padding: 120px 32px;
@@ -788,6 +904,9 @@ body {
   }
   .gallery--local {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .reviews-cards {
+    grid-template-columns: 1fr;
   }
 }
 
