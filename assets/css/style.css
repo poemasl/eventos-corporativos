@@ -169,14 +169,28 @@ body {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0,0,0,0.3) 0%,
-    rgba(0,0,0,0.5) 50%,
-    rgba(0,0,0,0.8) 100%
+    rgba(0,0,0,0.05) 0%,
+    rgba(0,0,0,0.1) 40%,
+    rgba(0,0,0,0.65) 80%,
+    rgba(0,0,0,0.85) 100%
   );
 }
 
 .hero-content {
   position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-content--bottom {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 2;
   text-align: center;
   padding: 0 24px;

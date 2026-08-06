@@ -98,7 +98,7 @@ const translations = {
     local_title: "Un espacio con personalidad",
     reviews_label: "Opiniones",
     reviews_title: "Lo que dicen de nosotros",
-    reviews_text: "Más de 150 reseñas en Google Maps con la máxima puntuación. Nuestros clientes valoran la calidad artística, el trato personalizado y la atmósfera única del espacio.",
+    reviews_text: "Desde el primer día, valoraciones de 5 sobre 5 en Google Maps. Nuestros clientes destacan la calidad artística, el trato personalizado y la atmósfera única del espacio.",
     reviews_cta: "Ver todas las reseñas",
   },
 
@@ -196,7 +196,7 @@ const translations = {
     local_title: "A space with personality",
     reviews_label: "Reviews",
     reviews_title: "What our guests say",
-    reviews_text: "Over 150 Google Maps reviews with top ratings. Our guests value the artistic quality, personalised service and the unique atmosphere of the space.",
+    reviews_text: "From day one, 5 out of 5 ratings on Google Maps. Our guests highlight the artistic quality, personalised service and the unique atmosphere of the space.",
     reviews_cta: "See all reviews",
   },
 
@@ -294,7 +294,7 @@ const translations = {
     local_title: "Un espai amb personalitat",
     reviews_label: "Opinions",
     reviews_title: "El que diuen de nosaltres",
-    reviews_text: "Més de 150 ressenyes a Google Maps amb la màxima puntuació. Els nostres clients valoren la qualitat artística, el tracte personalitzat i l'atmosfera única de l'espai.",
+    reviews_text: "Des del primer dia, valoracions de 5 sobre 5 a Google Maps. Els nostres clients destaquen la qualitat artística, el tracte personalitzat i l'atmosfera única de l'espai.",
     reviews_cta: "Veure totes les ressenyes",
   }
 };
