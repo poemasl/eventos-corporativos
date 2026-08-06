@@ -349,6 +349,21 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
+// ── Spotify play button ──
+const heroPlay = document.getElementById('heroPlay');
+const heroSpotify = document.getElementById('heroSpotify');
+if (heroPlay && heroSpotify) {
+  heroPlay.addEventListener('click', () => {
+    if (heroSpotify.style.display === 'none') {
+      heroSpotify.style.display = 'block';
+      heroPlay.textContent = '⏸';
+    } else {
+      heroSpotify.style.display = 'none';
+      heroPlay.textContent = '▶';
+    }
+  });
+}
+
 // ── Back to top ──
 const backToTop = document.getElementById('backToTop');
 window.addEventListener('scroll', () => {

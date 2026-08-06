@@ -221,6 +221,30 @@ body {
   text-shadow: 0 2px 12px rgba(0,0,0,0.5);
 }
 
+.hero-play {
+  background: none;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.hero-play:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+
+.hero-spotify {
+  margin-top: 12px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
 .scroll-hint {
   position: absolute;
   bottom: 32px;
