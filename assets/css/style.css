@@ -222,21 +222,30 @@ body {
 }
 
 .hero-play {
-  background: none;
-  border: 1px solid var(--gold);
+  background: rgba(191,155,48,0.15);
+  border: 2px solid var(--gold);
   color: var(--gold);
-  width: 44px;
-  height: 44px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  font-size: 16px;
+  font-size: 22px;
   cursor: pointer;
-  margin-top: 16px;
-  transition: background 0.3s, color 0.3s;
+  margin-top: 20px;
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+  animation: pulseGlow 2s ease-in-out infinite;
+  box-shadow: 0 0 18px rgba(191,155,48,0.35);
 }
 
 .hero-play:hover {
   background: var(--gold);
   color: var(--black);
+  transform: scale(1.1);
+  box-shadow: 0 0 28px rgba(191,155,48,0.6);
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 18px rgba(191,155,48,0.35); }
+  50% { box-shadow: 0 0 30px rgba(191,155,48,0.6); }
 }
 
 .hero-spotify {
@@ -845,6 +854,13 @@ body {
 
 .contacto-link:hover {
   color: var(--gold-light);
+}
+
+.contacto-direccion {
+  font-size: 0.85rem;
+  color: var(--white-dim);
+  margin-top: 8px;
+  font-style: italic;
 }
 
 /* ── BACK TO TOP ── */
