@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Coste comisión — Ejemplos</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        h1 {
+            font-size: 1.4em;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 10px 14px;
+            text-align: right;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        th {
+            background: #f5f5f5;
+            font-weight: 600;
+            text-align: right;
+        }
+        th:first-child, td:first-child {
+            text-align: left;
+        }
+        tr.highlight td {
+            font-weight: 700;
+            background: #f0f8f0;
+        }
+        tr.highlight-cost td {
+            color: #c0392b;
+        }
+        .note {
+            margin-top: 30px;
+            padding: 15px 20px;
+            background: #fafafa;
+            border-left: 3px solid #333;
+            font-size: 0.95em;
+        }
+        .note strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .percent-box {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: #2c3e50;
+            color: white;
+            border-radius: 6px;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Coste real de la comisión comercial en nómina</h1>
+    <p class="subtitle">3 ejemplos de eventos corporativos</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Ejemplo 1</th>
+                <th>Ejemplo 2</th>
+                <th>Ejemplo 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Personas</td>
+                <td>35</td>
+                <td>60</td>
+                <td>40</td>
+            </tr>
+            <tr>
+                <td>Precio/persona</td>
+                <td>130 €</td>
+                <td>100 €</td>
+                <td>120 €</td>
+            </tr>
+            <tr>
+                <td>Facturación total del evento</td>
+                <td>4.550 €</td>
+                <td>6.000 €</td>
+                <td>4.800 €</td>
+            </tr>
+            <tr>
+                <td>Comisión (%)</td>
+                <td>10%</td>
+                <td>10%</td>
+                <td>12%</td>
+            </tr>
+            <tr>
+                <td>Comisión bruta</td>
+                <td>455 €</td>
+                <td>600 €</td>
+                <td>576 €</td>
+            </tr>
+            <tr>
+                <td>Coste Seguridad Social empresa (~30%)</td>
+                <td>~137 €</td>
+                <td>~180 €</td>
+                <td>~173 €</td>
+            </tr>
+            <tr class="highlight-cost">
+                <td>Coste total para la empresa</td>
+                <td>~592 €</td>
+                <td>~780 €</td>
+                <td>~749 €</td>
+            </tr>
+            <tr class="highlight">
+                <td>Le queda a la empresa</td>
+                <td>~3.958 €</td>
+                <td>~5.220 €</td>
+                <td>~4.051 €</td>
+            </tr>
+            <tr>
+                <td>% de la facturación que se va en comisión</td>
+                <td>13%</td>
+                <td>13%</td>
+                <td>15,6%</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="percent-box">
+        La empresa se queda con el 85-87% de la facturación de cada evento.
+    </div>
+
+    <div class="note">
+        <strong>¿Por qué no es un 30%?</strong>
+        El 30% es lo que la Seguridad Social cobra sobre la comisión (455 € × 30% = 137 €). 
+        Pero sobre la facturación total del evento (4.550 €), el coste completo (592 €) representa solo un 13%. 
+        Son dos bases de cálculo diferentes.
+    </div>
+
+    <div class="note">
+        <strong>Lo más importante:</strong>
+        Estos son ingresos nuevos que sin gestión comercial no existirían. 
+        La empresa no pierde un 13% de lo que ya tiene — gana un 87% de lo que antes no tenía.
+    </div>
+
+</body>
+</html>
