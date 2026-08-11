@@ -43,43 +43,15 @@ const translations = {
     show_bgt_text: "Barcelona Guitar Trio & Dance — Homenaje a Paco de Lucía. Un recorrido por la obra del maestro, con virtuosismo técnico y presencia escénica que deja sin palabras. 1 hora de duración.",
 
     menu_label: "La mesa",
-    menu_title: "El menú",
+    menu_title: "Nuestros menús",
+    menu_subtitle: "Dos opciones diseñadas para eventos privados. Elige la que mejor se adapte a tu velada.",
 
-    menu_cat_aperitivos: "Para compartir",
-    menu_cat_primeros: "Plato principal",
-    menu_cat_segundos: "Postre",
-    menu_cat_postres: "",
-    menu_cat_bebidas: "Bebidas",
+    menu_cocktail_title: "Menú Cocktail",
+    menu_cocktail_download: "Ver menú Cocktail",
+    menu_finger_title: "Menú Finger Food",
+    menu_finger_download: "Ver menú Finger Food",
 
-    aperitivos: [
-      "Pan de pagés con tomate de colgar, ajo y aceite de oliva virgen extra",
-      "Tortilla española de patatas",
-      "Chips caseras",
-      "Selección de aceitunas",
-      "Jamón ibérico",
-      "Anchoas del Cantábrico"
-    ],
-    primeros: [
-      "Ternera a la jardinera, elaborada con ternera gallega, verduras de temporada y salsa cazadora tradicional",
-      "ó",
-      "Paella de verduras (opción vegetariana)"
-    ],
-    segundos: [
-      "Tarta Larpeira, tradicional bizcocho gallego, acompañada de chocolate fundido y crema de whisky",
-      "Tarta de hojaldre con crema de yogur y frambuesas",
-      "Yogur cremoso con mermelada de frutos rojos y hojas de menta fresca"
-    ],
-    postres: [],
-    bebidas: [
-      "Agua / Agua con gas",
-      "Cervezas",
-      "Vino tinto Rioja",
-      "Vino blanco"
-    ],
-
-    menu_nota: "Plato principal y postre a elegir previamente. Menú sujeto a disponibilidad de temporada. Podemos adaptar a intolerancias o requerimientos especiales.",
-    menu_download: "Descargar menú completo (PDF)",
-    menu_download: "Descargar menú completo (PDF)",
+    menu_nota: "Menú sujeto a disponibilidad de temporada. Podemos adaptar a intolerancias o requerimientos especiales.",
 
     precio_label: "El precio",
     precio_pp: "por persona",
@@ -142,42 +114,15 @@ const translations = {
     show_bgt_text: "Barcelona Guitar Trio & Dance — Tribute to Paco de Lucía. A journey through the master's work, with breathtaking technical mastery and stage presence. 1-hour duration.",
 
     menu_label: "The table",
-    menu_title: "The menu",
+    menu_title: "Our menus",
+    menu_subtitle: "Two options designed for private events. Choose the one that best suits your evening.",
 
-    menu_cat_aperitivos: "To share",
-    menu_cat_primeros: "Main course",
-    menu_cat_segundos: "Dessert",
-    menu_cat_postres: "",
-    menu_cat_bebidas: "Drinks",
+    menu_cocktail_title: "Cocktail Menu",
+    menu_cocktail_download: "View Cocktail menu",
+    menu_finger_title: "Finger Food Menu",
+    menu_finger_download: "View Finger Food menu",
 
-    aperitivos: [
-      "Country bread with hanging tomato, garlic and extra virgin olive oil",
-      "Spanish potato omelette",
-      "Homemade crisps",
-      "Olive selection",
-      "Iberian ham",
-      "Cantabrian anchovies"
-    ],
-    primeros: [
-      "Beef jardinera, made with Galician beef, seasonal vegetables and traditional hunter's sauce",
-      "or",
-      "Vegetable paella (vegetarian option)"
-    ],
-    segundos: [
-      "Tarta Larpeira, traditional Galician sponge cake with melted chocolate and whisky cream",
-      "Puff pastry tart with yoghurt cream and raspberries",
-      "Creamy yoghurt with red berry jam and fresh mint leaves"
-    ],
-    postres: [],
-    bebidas: [
-      "Water / Sparkling water",
-      "Beers",
-      "Rioja red wine",
-      "White wine"
-    ],
-
-    menu_nota: "Main course and dessert to be chosen in advance. Menu subject to seasonal availability. We can adapt to dietary requirements or intolerances.",
-    menu_download: "Download full menu (PDF)",
+    menu_nota: "Menu subject to seasonal availability. We can adapt to dietary requirements or intolerances.",
 
     precio_label: "Pricing",
     precio_pp: "per person",
@@ -240,42 +185,15 @@ const translations = {
     show_bgt_text: "Barcelona Guitar Trio & Dance — Homenatge a Paco de Lucía. Un recorregut per l'obra del mestre, amb virtuosisme tècnic i presència escènica que deixa sense paraules. 1 hora de durada.",
 
     menu_label: "La taula",
-    menu_title: "El menú",
+    menu_title: "Els nostres menús",
+    menu_subtitle: "Dues opcions dissenyades per a esdeveniments privats. Tria la que millor s'adapti a la teva vetllada.",
 
-    menu_cat_aperitivos: "Per compartir",
-    menu_cat_primeros: "Plat principal",
-    menu_cat_segundos: "Postres",
-    menu_cat_postres: "",
-    menu_cat_bebidas: "Begudes",
+    menu_cocktail_title: "Menú Cocktail",
+    menu_cocktail_download: "Veure menú Cocktail",
+    menu_finger_title: "Menú Finger Food",
+    menu_finger_download: "Veure menú Finger Food",
 
-    aperitivos: [
-      "Pa de pagès amb tomàquet de penjar, all i oli d'oliva verge extra",
-      "Truita espanyola de patates",
-      "Xips casolanes",
-      "Selecció d'olives",
-      "Pernil ibèric",
-      "Anxoves del Cantàbric"
-    ],
-    primeros: [
-      "Vedella a la jardinera, elaborada amb vedella gallega, verdures de temporada i salsa caçadora tradicional",
-      "o",
-      "Paella de verdures (opció vegetariana)"
-    ],
-    segundos: [
-      "Tarta Larpeira, tradicional pa de pessic gallec amb xocolata fosa i crema de whisky",
-      "Tarta de full amb crema de iogurt i gerds",
-      "Iogurt cremós amb melmelada de fruits vermells i fulles de menta fresca"
-    ],
-    postres: [],
-    bebidas: [
-      "Aigua / Aigua amb gas",
-      "Cerveses",
-      "Vi negre Rioja",
-      "Vi blanc"
-    ],
-
-    menu_nota: "Plat principal i postres a escollir prèviament. Menú subjecte a disponibilitat de temporada. Podem adaptar a intoleràncies o requeriments especials.",
-    menu_download: "Descarregar menú complet (PDF)",
+    menu_nota: "Menú subjecte a disponibilitat de temporada. Podem adaptar a intoleràncies o requeriments especials.",
 
     precio_label: "El preu",
     precio_pp: "per persona",
