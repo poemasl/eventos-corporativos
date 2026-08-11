@@ -44,14 +44,64 @@ const translations = {
 
     menu_label: "La mesa",
     menu_title: "Nuestros menús",
-    menu_subtitle: "Dos opciones diseñadas para eventos privados. Elige la que mejor se adapte a tu velada.",
+    menu_subtitle: "Dos opciones diseñadas para eventos privados. Menú orientativo, sujeto a confirmación y susceptible de cambios.",
 
-    menu_cocktail_title: "Menú Cocktail",
-    menu_cocktail_download: "Ver menú Cocktail",
-    menu_finger_title: "Menú Finger Food",
-    menu_finger_download: "Ver menú Finger Food",
+    menu_cocktail_download: "Descargar menú Cocktail (PDF)",
+    menu_finger_download: "Descargar menú Finger Food (PDF)",
 
-    menu_nota: "Menú sujeto a disponibilidad de temporada. Podemos adaptar a intolerancias o requerimientos especiales.",
+    cocktail_frios_title: "Estación de fríos",
+    cocktail_frios: [
+      "Salmorejo",
+      "Surtido de quesos nacionales",
+      "Ibéricos: jamón, chorizo, lomo...",
+      "Tortillas de patatas",
+      "Escalivada",
+      "Anchoas del cantábrico",
+      "Surtido de gildas y aceitunas",
+      "Panes y crujientes",
+      "Ensaladilla rusa",
+      "Ensalada de tomate con ventresca de atún"
+    ],
+    cocktail_calientes_title: "Estación de calientes",
+    cocktail_calientes: [
+      "Carrillera al vino tinto",
+      "Croquetas de cocido",
+      "Gambas de Huelva",
+      "Pulpo a la gallega",
+      "Dados de solomillo adobado con pimientos del padrón",
+      "Albóndigas en salsa"
+    ],
+    cocktail_postres_title: "Postres",
+    cocktail_postres: [
+      "Crema catalana",
+      "Torrijas con crema",
+      "Mousse de chocolate con aceite de oliva y escamas de sal",
+      "Arroz con leche"
+    ],
+
+    finger_compartir_title: "Para compartir",
+    finger_compartir: [
+      "Salmorejo cordobés con huevo y jamón",
+      "Tortilla de patatas",
+      "Jamón con pan de coca",
+      "Croquetas de rabo de toro",
+      "Anchoas del cantábrico",
+      "Surtido de gildas y aceitunas"
+    ],
+    finger_principal_title: "Principal (a escoger previamente)",
+    finger_principal: [
+      "Meloso de carrillera al vino tinto con parmentier de boniato",
+      "Escalivada",
+      "Salmón con salsa teriyaki"
+    ],
+    finger_postre_title: "Postre (a escoger previamente)",
+    finger_postre: [
+      "Crema catalana",
+      "Torrijas con crema pastelera",
+      "Arroz con leche"
+    ],
+
+    menu_nota: "Menú orientativo, pendiente de confirmación y susceptible de cambios según disponibilidad de temporada. Podemos adaptar a intolerancias o requerimientos especiales.",
 
     precio_label: "El precio",
     precio_pp: "por persona",
@@ -115,14 +165,64 @@ const translations = {
 
     menu_label: "The table",
     menu_title: "Our menus",
-    menu_subtitle: "Two options designed for private events. Choose the one that best suits your evening.",
+    menu_subtitle: "Two options designed for private events. Indicative menu, subject to confirmation and may change.",
 
-    menu_cocktail_title: "Cocktail Menu",
-    menu_cocktail_download: "View Cocktail menu",
-    menu_finger_title: "Finger Food Menu",
-    menu_finger_download: "View Finger Food menu",
+    menu_cocktail_download: "Download Cocktail menu (PDF)",
+    menu_finger_download: "Download Finger Food menu (PDF)",
 
-    menu_nota: "Menu subject to seasonal availability. We can adapt to dietary requirements or intolerances.",
+    cocktail_frios_title: "Cold station",
+    cocktail_frios: [
+      "Salmorejo",
+      "Selection of national cheeses",
+      "Iberian charcuterie: ham, chorizo, lomo...",
+      "Spanish potato omelettes",
+      "Escalivada",
+      "Cantabrian anchovies",
+      "Gildas and olive selection",
+      "Breads and crispbreads",
+      "Russian salad",
+      "Tomato salad with tuna belly"
+    ],
+    cocktail_calientes_title: "Hot station",
+    cocktail_calientes: [
+      "Beef cheek in red wine",
+      "Cocido croquettes",
+      "Huelva prawns",
+      "Galician-style octopus",
+      "Marinated sirloin cubes with padrón peppers",
+      "Meatballs in sauce"
+    ],
+    cocktail_postres_title: "Desserts",
+    cocktail_postres: [
+      "Crema catalana",
+      "Torrijas with cream",
+      "Chocolate mousse with olive oil and sea salt flakes",
+      "Rice pudding"
+    ],
+
+    finger_compartir_title: "To share",
+    finger_compartir: [
+      "Córdoba-style salmorejo with egg and ham",
+      "Spanish potato omelette",
+      "Ham with coca bread",
+      "Oxtail croquettes",
+      "Cantabrian anchovies",
+      "Gildas and olive selection"
+    ],
+    finger_principal_title: "Main (to choose in advance)",
+    finger_principal: [
+      "Slow-cooked beef cheek in red wine with sweet potato parmentier",
+      "Escalivada",
+      "Salmon with teriyaki sauce"
+    ],
+    finger_postre_title: "Dessert (to choose in advance)",
+    finger_postre: [
+      "Crema catalana",
+      "Torrijas with pastry cream",
+      "Rice pudding"
+    ],
+
+    menu_nota: "Indicative menu, subject to confirmation and may change depending on seasonal availability. We can adapt to dietary requirements or intolerances.",
 
     precio_label: "Pricing",
     precio_pp: "per person",
@@ -186,14 +286,64 @@ const translations = {
 
     menu_label: "La taula",
     menu_title: "Els nostres menús",
-    menu_subtitle: "Dues opcions dissenyades per a esdeveniments privats. Tria la que millor s'adapti a la teva vetllada.",
+    menu_subtitle: "Dues opcions dissenyades per a esdeveniments privats. Menú orientatiu, subjecte a confirmació i susceptible de canvis.",
 
-    menu_cocktail_title: "Menú Cocktail",
-    menu_cocktail_download: "Veure menú Cocktail",
-    menu_finger_title: "Menú Finger Food",
-    menu_finger_download: "Veure menú Finger Food",
+    menu_cocktail_download: "Descarregar menú Cocktail (PDF)",
+    menu_finger_download: "Descarregar menú Finger Food (PDF)",
 
-    menu_nota: "Menú subjecte a disponibilitat de temporada. Podem adaptar a intoleràncies o requeriments especials.",
+    cocktail_frios_title: "Estació de freds",
+    cocktail_frios: [
+      "Salmorejo",
+      "Assortiment de formatges nacionals",
+      "Ibèrics: pernil, xoriço, llom...",
+      "Truites de patates",
+      "Escalivada",
+      "Anxoves del Cantàbric",
+      "Assortiment de gildes i olives",
+      "Pans i cruixents",
+      "Ensaladilla russa",
+      "Amanida de tomàquet amb ventresca de tonyina"
+    ],
+    cocktail_calientes_title: "Estació de calents",
+    cocktail_calientes: [
+      "Galtes de vedella al vi negre",
+      "Croquetes de cuit",
+      "Gambes de Huelva",
+      "Pop a la gallega",
+      "Daus de llom adobat amb pebrots del padró",
+      "Mandonguilles en salsa"
+    ],
+    cocktail_postres_title: "Postres",
+    cocktail_postres: [
+      "Crema catalana",
+      "Torrijas amb crema",
+      "Mousse de xocolata amb oli d'oliva i escates de sal",
+      "Arròs amb llet"
+    ],
+
+    finger_compartir_title: "Per compartir",
+    finger_compartir: [
+      "Salmorejo cordovès amb ou i pernil",
+      "Truita de patates",
+      "Pernil amb pa de coca",
+      "Croquetes de rabo de toro",
+      "Anxoves del Cantàbric",
+      "Assortiment de gildes i olives"
+    ],
+    finger_principal_title: "Principal (a escollir prèviament)",
+    finger_principal: [
+      "Melós de galta de vedella al vi negre amb parmentier de moniato",
+      "Escalivada",
+      "Salmó amb salsa teriyaki"
+    ],
+    finger_postre_title: "Postre (a escollir prèviament)",
+    finger_postre: [
+      "Crema catalana",
+      "Torrijas amb crema pastissera",
+      "Arròs amb llet"
+    ],
+
+    menu_nota: "Menú orientatiu, pendent de confirmació i susceptible de canvis segons disponibilitat de temporada. Podem adaptar a intoleràncies o requeriments especials.",
 
     precio_label: "El preu",
     precio_pp: "per persona",
@@ -303,3 +453,14 @@ if (langParam && translations[langParam]) {
   document.documentElement.lang = currentLang;
 }
 applyTranslations(currentLang);
+
+// ── Menu tabs ──
+document.querySelectorAll('.menu-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.menu-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.menu-panel').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    const target = tab.getAttribute('data-menu');
+    document.getElementById('menu-' + target).classList.add('active');
+  });
+});

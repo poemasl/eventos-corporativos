@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menú Cocktail · La Perla del Born</title>
+  <link rel="icon" type="image/jpeg" href="favicon.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --gold: #C9A84C;
+      --gold-light: #E8C96A;
+      --black: #0A0A0A;
+      --dark: #111111;
+      --dark-2: #1A1A1A;
+      --white: #F5F0E8;
+      --white-dim: rgba(245, 240, 232, 0.7);
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Montserrat', sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 18px; }
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--font-sans);
+      font-weight: 300;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+    .menu-page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 40px;
+    }
+    .menu-header {
+      text-align: center;
+      margin-bottom: 60px;
+      border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+      padding-bottom: 40px;
+    }
+    .menu-header img {
+      height: 80px;
+      margin-bottom: 24px;
+      opacity: 0.9;
+    }
+    .menu-header h1 {
+      font-family: var(--font-serif);
+      font-size: 2.8rem;
+      font-weight: 300;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .menu-header .subtitle {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-style: italic;
+      color: var(--gold);
+    }
+    .menu-section {
+      margin-bottom: 48px;
+    }
+    .menu-section h2 {
+      font-family: var(--font-sans);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+    }
+    .menu-section ul {
+      list-style: none;
+      padding: 0;
+    }
+    .menu-section li {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: var(--white-dim);
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(201, 168, 76, 0.08);
+    }
+    .menu-section li:last-child {
+      border-bottom: none;
+    }
+    .menu-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .menu-photos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin: 48px 0;
+    }
+    .menu-photos img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-radius: 4px;
+      filter: brightness(0.9) saturate(0.85);
+    }
+    .menu-footer {
+      text-align: center;
+      margin-top: 60px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(201, 168, 76, 0.2);
+    }
+    .menu-footer p {
+      font-family: var(--font-serif);
+      font-size: 0.95rem;
+      font-style: italic;
+      color: rgba(245, 240, 232, 0.4);
+      line-height: 1.8;
+    }
+    .menu-footer .contact {
+      margin-top: 20px;
+      font-style: normal;
+      color: var(--gold);
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+    }
+    @media print {
+      body { background: #fff; color: #111; }
+      .menu-section li { color: #333; }
+      .menu-header h1 { color: #111; }
+      .menu-section h2 { color: #9A7A30; }
+    }
+    @media (max-width: 640px) {
+      .menu-page { padding: 40px 24px; }
+      .menu-grid { grid-template-columns: 1fr; }
+      .menu-photos { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="menu-page">
+    <div class="menu-header">
+      <img src="icons/Logos La Perla/5.2 Logo blanco_fondo transparente_La Perla del Born.png" alt="La Perla del Born" />
+      <h1>Menú Cocktail</h1>
+      <p class="subtitle">Eventos privados</p>
+    </div>
+
+    <div class="menu-grid">
+      <div class="menu-section">
+        <h2>Estación de fríos</h2>
+        <ul>
+          <li>Salmorejo</li>
+          <li>Surtido de quesos nacionales</li>
+          <li>Ibéricos: jamón, chorizo, lomo...</li>
+          <li>Tortillas de patatas</li>
+          <li>Escalivada</li>
+          <li>Anchoas del cantábrico</li>
+          <li>Surtido de gildas y aceitunas</li>
+          <li>Panes y crujientes</li>
+          <li>Ensaladilla rusa</li>
+          <li>Ensalada de tomate con ventresca de atún</li>
+        </ul>
+      </div>
+
+      <div class="menu-section">
+        <h2>Estación de calientes</h2>
+        <ul>
+          <li>Carrillera al vino tinto</li>
+          <li>Croquetas de cocido</li>
+          <li>Gambas de Huelva</li>
+          <li>Pulpo a la gallega</li>
+          <li>Dados de solomillo adobado con pimientos del padrón</li>
+          <li>Albóndigas en salsa</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="menu-section">
+      <h2>Postres</h2>
+      <ul>
+        <li>Crema catalana</li>
+        <li>Torrijas con crema</li>
+        <li>Mousse de chocolate con aceite de oliva y escamas de sal</li>
+        <li>Arroz con leche</li>
+      </ul>
+    </div>
+
+    <div class="menu-photos">
+      <img src="icons/Im%C3%A1genes%20La%20Perla/Cenas%20-%20La%20Perla/cena%201.jpeg" alt="La Perla del Born" />
+      <img src="icons/Im%C3%A1genes%20La%20Perla/Cenas%20-%20La%20Perla/cena%202.jpeg" alt="La Perla del Born" />
+      <img src="icons/Im%C3%A1genes%20La%20Perla/Cenas%20-%20La%20Perla/cena%204.jpeg" alt="La Perla del Born" />
+    </div>
+
+    <div class="menu-footer">
+      <p>Menú orientativo, pendiente de confirmación y susceptible de cambios según disponibilidad de temporada.<br>Podemos adaptar a intolerancias o requerimientos especiales.</p>
+      <p class="contact">carol@poemasl.com · +34 677 321 358<br>Carrer dels Flassaders, 42 · El Born · Barcelona</p>
+    </div>
+  </div>
+</body>
+</html>

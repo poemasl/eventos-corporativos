@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css?v=15" />
+  <link rel="stylesheet" href="assets/css/style.css?v=16" />
 </head>
 <body>
 
@@ -205,23 +205,61 @@
       <p class="section-label" data-i18n="menu_label"></p>
       <h2 class="section-title" data-i18n="menu_title"></h2>
       <p class="menu-subtitle" data-i18n="menu_subtitle"></p>
-      <div class="menu-cards">
-        <div class="menu-card">
-          <h3 data-i18n="menu_cocktail_title"></h3>
-          <div class="menu-card-img">
-            <img src="icons/Men%C3%BAs%20la%20perla/Men%C3%BA%20Cocktail.jpeg" alt="Menú Cocktail" loading="lazy" />
+
+      <!-- Menu Tabs -->
+      <div class="menu-tabs">
+        <button class="menu-tab active" data-menu="cocktail">Menú Cocktail</button>
+        <button class="menu-tab" data-menu="finger">Menú Finger Food</button>
+      </div>
+
+      <!-- COCKTAIL MENU -->
+      <div class="menu-panel active" id="menu-cocktail">
+        <div class="menu-cols menu-cols--3">
+          <div class="menu-col">
+            <h4 class="menu-cat" data-i18n="cocktail_frios_title"></h4>
+            <ul class="menu-list" data-i18n-list="cocktail_frios"></ul>
           </div>
-          <a href="icons/Men%C3%BAs%20la%20perla/Men%C3%BA%20Cocktail.jpeg" target="_blank" class="btn-gold" data-i18n="menu_cocktail_download"></a>
+          <div class="menu-col">
+            <h4 class="menu-cat" data-i18n="cocktail_calientes_title"></h4>
+            <ul class="menu-list" data-i18n-list="cocktail_calientes"></ul>
+          </div>
+          <div class="menu-col">
+            <h4 class="menu-cat" data-i18n="cocktail_postres_title"></h4>
+            <ul class="menu-list" data-i18n-list="cocktail_postres"></ul>
+          </div>
         </div>
-        <div class="menu-card">
-          <h3 data-i18n="menu_finger_title"></h3>
-          <div class="menu-card-img">
-            <img src="icons/Men%C3%BAs%20la%20perla/Men%C3%BA%20Finger.jpeg" alt="Menú Finger Food" loading="lazy" />
-          </div>
-          <a href="icons/Men%C3%BAs%20la%20perla/Men%C3%BA%20Finger.jpeg" target="_blank" class="btn-gold" data-i18n="menu_finger_download"></a>
+        <div class="text-center">
+          <a href="menu-cocktail.html" target="_blank" class="btn-gold" data-i18n="menu_cocktail_download"></a>
         </div>
       </div>
+
+      <!-- FINGER FOOD MENU -->
+      <div class="menu-panel" id="menu-finger">
+        <div class="menu-cols menu-cols--3">
+          <div class="menu-col">
+            <h4 class="menu-cat" data-i18n="finger_compartir_title"></h4>
+            <ul class="menu-list" data-i18n-list="finger_compartir"></ul>
+          </div>
+          <div class="menu-col">
+            <h4 class="menu-cat" data-i18n="finger_principal_title"></h4>
+            <ul class="menu-list" data-i18n-list="finger_principal"></ul>
+          </div>
+          <div class="menu-col">
+            <h4 class="menu-cat" data-i18n="finger_postre_title"></h4>
+            <ul class="menu-list" data-i18n-list="finger_postre"></ul>
+          </div>
+        </div>
+        <div class="text-center">
+          <a href="menu-finger-food.html" target="_blank" class="btn-gold" data-i18n="menu_finger_download"></a>
+        </div>
+      </div>
+
       <p class="menu-nota" data-i18n="menu_nota"></p>
+      <div class="menu-photos-row">
+        <img src="icons/Im%C3%A1genes%20La%20Perla/Cenas%20-%20La%20Perla/cena%201.jpeg" alt="Cena La Perla del Born" loading="lazy" />
+        <img src="icons/Im%C3%A1genes%20La%20Perla/Cenas%20-%20La%20Perla/cena%202.jpeg" alt="Cena La Perla del Born" loading="lazy" />
+        <img src="icons/Im%C3%A1genes%20La%20Perla/Cenas%20-%20La%20Perla/cena%204.jpeg" alt="Cena La Perla del Born" loading="lazy" />
+      </div>
     </div>
   </section>
 
