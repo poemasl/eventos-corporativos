@@ -111,6 +111,26 @@
     }
     .hero-logo { width: min(300px, 65vw); margin-bottom: 28px; }
     .hero-logo img { width: 100%; height: auto; filter: drop-shadow(0 2px 20px rgba(0,0,0,0.6)); }
+
+    .hero-play {
+      background: rgba(191,155,48,0.15);
+      border: 2px solid var(--gold);
+      color: var(--gold);
+      width: 60px; height: 60px; border-radius: 50%;
+      font-size: 22px; cursor: pointer; margin-top: 20px;
+      transition: background 0.3s, color 0.3s, transform 0.3s;
+      animation: pulseGlow 2s ease-in-out infinite;
+      box-shadow: 0 0 18px rgba(191,155,48,0.35);
+    }
+    .hero-play:hover {
+      background: var(--gold); color: var(--black);
+      transform: scale(1.1); box-shadow: 0 0 28px rgba(191,155,48,0.6);
+    }
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 18px rgba(191,155,48,0.35); }
+      50% { box-shadow: 0 0 30px rgba(191,155,48,0.6); }
+    }
+    .hero-spotify { margin-top: 12px; border-radius: 8px; overflow: hidden; }
     .hero-tagline {
       font-family: var(--font-serif); font-size: clamp(1.3rem, 3vw, 1.9rem);
       font-weight: 300; font-style: italic; color: var(--white);
@@ -176,6 +196,13 @@
     }
     .show-details li strong {
       color: var(--gold); font-weight: 500;
+    }
+    .shows-horario {
+      margin-top: 48px;
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      color: var(--gold);
+      letter-spacing: 0.1em;
     }
 
     /* ── GALLERY ── */
@@ -352,13 +379,17 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-overlay"></div>
-    <img src="../icons/Im%C3%A1genes%20La%20Perla/Barcelona%20Guitar%20Trio/LaPerladelBorn98.jpg" alt="Concierto en La Perla del Born" class="hero-bg" />
+    <img src="../icons/Im%C3%A1genes%20La%20Perla/Born%20Flamenco/IRUN2775.jpg" alt="Concierto en La Perla del Born" class="hero-bg" />
     <div class="hero-content">
       <div class="hero-logo">
         <img src="../icons/Logos%20La%20Perla/5.2%20Logo%20blanco_fondo%20transparente_La%20Perla%20del%20Born.png" alt="La Perla del Born" />
       </div>
       <p class="hero-tagline" data-i18n="hero_tagline"></p>
       <a href="#contacto" class="btn-gold" data-i18n="hero_cta"></a>
+      <button class="hero-play" id="heroPlay" aria-label="Reproducir música">▶</button>
+      <div class="hero-spotify" id="heroSpotify" style="display:none;">
+        <iframe style="border-radius:8px" src="https://open.spotify.com/embed/track/3tLQoWi8PjBwnuE1jLBsby?utm_source=generator&theme=0" width="300" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
     </div>
     <div class="scroll-hint"><span></span></div>
   </section>
@@ -381,7 +412,7 @@
 
         <div class="show-card">
           <div class="show-img-wrap">
-            <img src="../icons/Im%C3%A1genes%20La%20Perla/Born%20Flamenco/IRUN4225.jpg" alt="Born Flamenco" loading="lazy" />
+            <img src="../icons/Im%C3%A1genes%20La%20Perla/Born%20Flamenco/IRUN2439.jpg" alt="Born Flamenco" loading="lazy" />
           </div>
           <div class="show-info">
             <h3>Born Flamenco</h3>
@@ -389,7 +420,6 @@
             <ul class="show-details">
               <li data-i18n="show_born_detail1"></li>
               <li data-i18n="show_born_detail2"></li>
-              <li data-i18n="show_born_detail3"></li>
             </ul>
           </div>
         </div>
@@ -404,12 +434,12 @@
             <ul class="show-details">
               <li data-i18n="show_bgt_detail1"></li>
               <li data-i18n="show_bgt_detail2"></li>
-              <li data-i18n="show_bgt_detail3"></li>
             </ul>
           </div>
         </div>
 
       </div>
+      <p class="shows-horario text-center" data-i18n="shows_horario"></p>
     </div>
   </section>
 
@@ -590,11 +620,11 @@
       show_born_text: "Espectáculo íntimo de flamenco puro. Guitarra, baile y cante en un formato cercano y directo que conecta con el alma del flamenco más auténtico.",
       show_born_detail1: "<strong>Duración:</strong> 1 hora",
       show_born_detail2: "<strong>Artistas:</strong> Guitarra, piano, baile y cante",
-      show_born_detail3: "<strong>Horarios:</strong> De miércoles a domingo, 18h y 20h",
       show_bgt_text: "Homenaje a Paco de Lucía con Barcelona Guitar Trio & Dance. Un recorrido por la obra del maestro con virtuosismo técnico y una presencia escénica que deja sin palabras.",
       show_bgt_detail1: "<strong>Duración:</strong> 1 hora",
       show_bgt_detail2: "<strong>Artistas:</strong> 3 guitarras, baile y percusión",
-      show_bgt_detail3: "<strong>Horarios:</strong> De miércoles a domingo, 18h y 20h",
+
+      shows_horario: "De miércoles a domingo · 18h y 20h",
 
       espacio_label: "El espacio",
       espacio_title: "Un rincón con alma en El Born",
@@ -650,11 +680,11 @@
       show_born_text: "An intimate pure flamenco show. Guitar, dance and singing in a close, direct format that connects with the soul of authentic flamenco.",
       show_born_detail1: "<strong>Duration:</strong> 1 hour",
       show_born_detail2: "<strong>Artists:</strong> Guitar, piano, dance and singing",
-      show_born_detail3: "<strong>Schedule:</strong> Wednesday to Sunday, 6pm and 8pm",
       show_bgt_text: "A tribute to Paco de Lucía by Barcelona Guitar Trio & Dance. A journey through the master's work with breathtaking technical mastery and stage presence.",
       show_bgt_detail1: "<strong>Duration:</strong> 1 hour",
       show_bgt_detail2: "<strong>Artists:</strong> 3 guitars, dance and percussion",
-      show_bgt_detail3: "<strong>Schedule:</strong> Wednesday to Sunday, 6pm and 8pm",
+
+      shows_horario: "Wednesday to Sunday · 6pm and 8pm",
 
       espacio_label: "The venue",
       espacio_title: "A soulful corner in El Born",
@@ -710,11 +740,11 @@
       show_born_text: "Espectacle íntim de flamenc pur. Guitarra, piano, ball i cant en un format proper i directe que connecta amb l'ànima del flamenc més autèntic.",
       show_born_detail1: "<strong>Durada:</strong> 1 hora",
       show_born_detail2: "<strong>Artistes:</strong> Guitarra, piano, ball i cant",
-      show_born_detail3: "<strong>Horaris:</strong> De dimecres a diumenge, 18h i 20h",
       show_bgt_text: "Homenatge a Paco de Lucía amb Barcelona Guitar Trio & Dance. Un recorregut per l'obra del mestre amb virtuosisme tècnic i una presència escènica que deixa sense paraules.",
       show_bgt_detail1: "<strong>Durada:</strong> 1 hora",
       show_bgt_detail2: "<strong>Artistes:</strong> 3 guitarres, ball i percussió",
-      show_bgt_detail3: "<strong>Horaris:</strong> De dimecres a diumenge, 18h i 20h",
+
+      shows_horario: "De dimecres a diumenge · 18h i 20h",
 
       espacio_label: "L'espai",
       espacio_title: "Un racó amb ànima al Born",
@@ -797,6 +827,21 @@
   window.addEventListener('scroll', () => {
     backToTop.classList.toggle('visible', window.scrollY > 600);
   });
+
+  // ── Spotify play button ──
+  const heroPlay = document.getElementById('heroPlay');
+  const heroSpotify = document.getElementById('heroSpotify');
+  if (heroPlay && heroSpotify) {
+    heroPlay.addEventListener('click', () => {
+      if (heroSpotify.style.display === 'none') {
+        heroSpotify.style.display = 'block';
+        heroPlay.textContent = '⏸';
+      } else {
+        heroSpotify.style.display = 'none';
+        heroPlay.textContent = '▶';
+      }
+    });
+  }
 
   // ── Init ──
   const urlParams = new URLSearchParams(window.location.search);
