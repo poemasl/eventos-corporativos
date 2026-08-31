@@ -3,362 +3,343 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>La Perla del Born · Eventos Privados</title>
-  <meta name="description" content="Eventos corporativos exclusivos en el corazón del Born, Barcelona. Espectáculo de flamenco en vivo, cena, cóctel y experiencias únicas para tu equipo." />
+  <title>La Perla del Born · Eventos y Conciertos en Barcelona</title>
+  <meta name="description" content="La Perla del Born: eventos privados exclusivos y conciertos de flamenco y guitarra en directo en el corazón del Born, Barcelona." />
   <link rel="icon" type="image/jpeg" href="favicon.jpg" />
   <link rel="apple-touch-icon" href="favicon.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css?v=16" />
+  <style>
+    :root {
+      --gold: #C9A84C;
+      --gold-light: #E8C96A;
+      --gold-dark: #9A7A30;
+      --black: #0A0A0A;
+      --dark: #111111;
+      --white: #F5F0E8;
+      --white-dim: rgba(245, 240, 232, 0.7);
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Montserrat', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--font-sans);
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* ── LANGUAGE BAR ── */
+    .lang-bar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 100;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .lang-btn {
+      background: none;
+      border: none;
+      color: var(--white-dim);
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      cursor: pointer;
+      padding: 4px 2px;
+      transition: color 0.25s;
+    }
+    .lang-btn:hover, .lang-btn.active { color: var(--gold); }
+    .lang-sep { color: rgba(245,240,232,0.15); font-size: 10px; }
+
+    /* ── HEADER ── */
+    .landing-header {
+      text-align: center;
+      padding: 80px 24px 40px;
+    }
+    .landing-logo {
+      height: 80px;
+      width: auto;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 2px 20px rgba(0,0,0,0.4));
+    }
+    .landing-subtitle {
+      font-family: var(--font-serif);
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--white-dim);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    /* ── SPLIT ── */
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    .split-card {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 3/4;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .split-card img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s ease, filter 0.8s ease;
+      filter: brightness(0.5) saturate(0.8);
+    }
+
+    .split-card:hover img {
+      transform: scale(1.05);
+      filter: brightness(0.65) saturate(1);
+    }
+
+    .split-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.85) 0%,
+        rgba(0,0,0,0.4) 40%,
+        rgba(0,0,0,0.1) 100%
+      );
+      pointer-events: none;
+    }
+
+    .split-content {
+      position: relative;
+      z-index: 2;
+      padding: 40px 32px;
+    }
+
+    .split-label {
+      font-family: var(--font-sans);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .split-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 300;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .split-text {
+      font-size: 0.85rem;
+      color: var(--white-dim);
+      line-height: 1.8;
+      margin-bottom: 24px;
+      max-width: 360px;
+    }
+
+    .split-btn {
+      display: inline-block;
+      padding: 12px 32px;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .split-card:hover .split-btn {
+      background: var(--gold);
+      color: var(--black);
+    }
+
+    /* ── FOOTER ── */
+    .landing-footer {
+      text-align: center;
+      padding: 40px 24px 60px;
+      border-top: 1px solid rgba(201, 168, 76, 0.12);
+    }
+    .landing-footer p {
+      font-family: var(--font-serif);
+      font-size: 0.85rem;
+      font-style: italic;
+      color: rgba(245, 240, 232, 0.35);
+    }
+    .landing-footer a {
+      color: var(--gold);
+      text-decoration: none;
+      font-style: normal;
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      transition: color 0.25s;
+    }
+    .landing-footer a:hover { color: var(--gold-light); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 700px) {
+      .split {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 24px 16px 60px;
+      }
+      .split-card {
+        aspect-ratio: 4/3;
+      }
+      .landing-header {
+        padding: 70px 20px 24px;
+      }
+      .split-content {
+        padding: 24px 24px;
+      }
+    }
+
+    /* ── ANIMATION ── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 0.8s ease forwards;
+    }
+    .fade-in:nth-child(2) { animation-delay: 0.15s; }
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
 
   <!-- LANGUAGE SELECTOR -->
   <div class="lang-bar">
-    <button class="lang-btn active" data-lang="es">ES</button>
+    <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
     <span class="lang-sep">·</span>
-    <button class="lang-btn" data-lang="en">EN</button>
-    <span class="lang-sep">·</span>
-    <button class="lang-btn" data-lang="ca">CA</button>
+    <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
   </div>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-overlay"></div>
-    <img src="icons/Im%C3%A1genes%20La%20Perla/Born%20Flamenco/IRUN0885.jpg" alt="Born Flamenco at La Perla del Born" class="hero-bg" />
-    <div class="hero-content hero-content--bottom">
-      <div class="hero-logo">
-        <img src="icons/Logos La Perla/5.2 Logo blanco_fondo transparente_La Perla del Born.png" alt="La Perla del Born" />
+  <!-- HEADER -->
+  <header class="landing-header fade-in">
+    <img src="icons/Logos La Perla/5.2 Logo blanco_fondo transparente_La Perla del Born.png" alt="La Perla del Born" class="landing-logo" />
+    <p class="landing-subtitle" id="landingSubtitle"></p>
+  </header>
+
+  <!-- SPLIT CARDS -->
+  <main class="split">
+
+    <!-- EVENTOS PRIVADOS -->
+    <a href="privados/" class="split-card fade-in">
+      <img src="icons/Im%C3%A1genes%20La%20Perla/Born%20Flamenco/IRUN0885.jpg" alt="Eventos privados en La Perla del Born" />
+      <div class="split-content">
+        <p class="split-label" id="privLabel"></p>
+        <h2 class="split-title" id="privTitle"></h2>
+        <p class="split-text" id="privText"></p>
+        <span class="split-btn" id="privBtn"></span>
       </div>
-      <p class="hero-tagline" data-i18n="hero_tagline"></p>
-      <a href="#contacto" class="btn-gold" data-i18n="hero_cta"></a>
-      <button class="hero-play" id="heroPlay" aria-label="Reproducir música">▶</button>
-      <div class="hero-spotify" id="heroSpotify" style="display:none;">
-        <iframe style="border-radius:8px" src="https://open.spotify.com/embed/track/0Lt6OhNiNz3gqjrMaiXfDU?utm_source=generator&theme=0" width="300" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </a>
+
+    <!-- CONCIERTOS PARA GRUPOS -->
+    <a href="conciertos/" class="split-card fade-in">
+      <img src="icons/Im%C3%A1genes%20La%20Perla/Barcelona%20Guitar%20Trio/LaPerladelBorn61.jpg" alt="Conciertos para grupos en La Perla del Born" />
+      <div class="split-content">
+        <p class="split-label" id="concLabel"></p>
+        <h2 class="split-title" id="concTitle"></h2>
+        <p class="split-text" id="concText"></p>
+        <span class="split-btn" id="concBtn"></span>
       </div>
-    </div>
-    <div class="scroll-hint">
-      <span></span>
-    </div>
-  </section>
+    </a>
 
-  <!-- INTRO -->
-  <section class="intro reveal">
-    <div class="container narrow">
-      <p class="intro-label" data-i18n="intro_label"></p>
-      <h2 class="intro-title" data-i18n="intro_title"></h2>
-      <p class="intro-text" data-i18n="intro_text"></p>
-    </div>
-  </section>
-
-  <!-- EL ESPACIO -->
-  <section class="espacio reveal">
-    <div class="container">
-      <p class="section-label" data-i18n="espacio_label"></p>
-      <h2 class="section-title" data-i18n="espacio_title"></h2>
-      <div class="gallery">
-        <div class="gallery-item large">
-          <img src="icons/Im%C3%A1genes%20La%20Perla/Local%20-%20La%20Perla/IRUN4327.jpg" alt="La Perla del Born interior" loading="lazy" />
-        </div>
-        <div class="gallery-item">
-          <img src="icons/Im%C3%A1genes%20La%20Perla/Local%20-%20La%20Perla/IRUN4335.jpg" alt="La Perla del Born sala" loading="lazy" />
-        </div>
-        <div class="gallery-item">
-          <img src="icons/Im%C3%A1genes%20La%20Perla/Born%20Flamenco/IRUN0894.jpg" alt="Born Flamenco" loading="lazy" />
-        </div>
-        <div class="gallery-item">
-          <img src="icons/Im%C3%A1genes%20La%20Perla/Born%20Flamenco/IRUN2316.jpg" alt="Born Flamenco" loading="lazy" />
-        </div>
-        <div class="gallery-item">
-          <img src="icons/Im%C3%A1genes%20La%20Perla/Barcelona%20Guitar%20Trio/LaPerladelBorn98.jpg" alt="Barcelona Guitar Trio" loading="lazy" />
-        </div>
-        <div class="gallery-item">
-          <img src="icons/Im%C3%A1genes%20La%20Perla/Barcelona%20Guitar%20Trio/LaPerladelBorn61.jpg" alt="Barcelona Guitar Trio" loading="lazy" />
-        </div>
-        <div class="gallery-item">
-          <img src="icons/Im%C3%A1genes%20La%20Perla/Born%20Flamenco/IRUN2439.jpg" alt="Flamenco en vivo" loading="lazy" />
-        </div>
-        <div class="gallery-item">
-          <img src="icons/Im%C3%A1genes%20La%20Perla/Born%20Flamenco/IRUN3960.jpg" alt="Actuación flamenco" loading="lazy" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- QUÉ INCLUYE -->
-  <section class="incluye reveal">
-    <div class="container narrow">
-      <p class="section-label" data-i18n="incluye_label"></p>
-      <h2 class="section-title" data-i18n="incluye_title"></h2>
-      <div class="pack-grid">
-        <div class="pack-item">
-          <div class="pack-img-wrap">
-            <img src="icons/Im%C3%A1genes%20La%20Perla/Local%20-%20La%20Perla/IRUN4327.jpg" alt="Espacio exclusivo" loading="lazy" />
-          </div>
-          <h3 data-i18n="pack_exclusiva_title"></h3>
-          <p data-i18n="pack_exclusiva_text"></p>
-        </div>
-        <div class="pack-item">
-          <div class="pack-img-wrap">
-            <img src="icons/Im%C3%A1genes%20La%20Perla/Born%20Flamenco/IRUN0885.jpg" alt="Espectáculo flamenco" loading="lazy" />
-          </div>
-          <h3 data-i18n="pack_show_title"></h3>
-          <p data-i18n="pack_show_text"></p>
-        </div>
-        <div class="pack-item">
-          <div class="pack-img-wrap">
-            <img src="icons/Im%C3%A1genes%20La%20Perla/Cenas%20-%20La%20Perla/cena%203.jpeg" alt="Cena" loading="lazy" />
-          </div>
-          <h3 data-i18n="pack_cena_title"></h3>
-          <p data-i18n="pack_cena_text"></p>
-        </div>
-        <div class="pack-item">
-          <div class="pack-img-wrap">
-            <img src="icons/Im%C3%A1genes%20La%20Perla/Bar%20-%20La%20Perla/LaPerladelBorn12.jpg" alt="Cóctel de bienvenida" loading="lazy" />
-          </div>
-          <h3 data-i18n="pack_coctel_title"></h3>
-          <p data-i18n="pack_coctel_text"></p>
-        </div>
-        <div class="pack-item">
-          <div class="pack-img-wrap">
-            <img src="icons/Im%C3%A1genes%20La%20Perla/Born%20Flamenco/IRUN2316.jpg" alt="Clase de flamenco" loading="lazy" />
-          </div>
-          <h3 data-i18n="pack_clase_title"></h3>
-          <p data-i18n="pack_clase_text"></p>
-        </div>
-        <div class="pack-item">
-          <div class="pack-img-wrap">
-            <img src="icons/Im%C3%A1genes%20La%20Perla/Bar%20-%20La%20Perla/LaPerladelBorn14.jpg" alt="Botellas especiales" loading="lazy" />
-          </div>
-          <h3 data-i18n="pack_botellas_title"></h3>
-          <p data-i18n="pack_botellas_text"></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- LOS ESPECTÁCULOS -->
-  <section class="shows reveal">
-    <div class="container">
-      <p class="section-label" data-i18n="shows_label"></p>
-      <h2 class="section-title" data-i18n="shows_title"></h2>
-      <div class="shows-grid">
-
-        <div class="show-card">
-          <div class="show-img-wrap">
-            <img src="icons/Imágenes La Perla/Born Flamenco/IRUN4225.jpg" alt="Born Flamenco" loading="lazy" />
-          </div>
-          <div class="show-info">
-            <h3>Born Flamenco</h3>
-            <p data-i18n="show_born_text"></p>
-          </div>
-        </div>
-
-        <div class="show-card">
-          <div class="show-img-wrap">
-            <img src="icons/Imágenes La Perla/Barcelona Guitar Trio/Banner_BCN_GUITAR_TRIO_890x468px_H.jpg" alt="Barcelona Guitar Trio" loading="lazy" />
-          </div>
-          <div class="show-info">
-            <h3>Barcelona Guitar Trio & Dance</h3>
-            <p data-i18n="show_bgt_text"></p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- GALERÍA FLAMENCO -->
-  <section class="galeria-bottom reveal">
-    <div class="gallery gallery--strip">
-      <img src="icons/Im%C3%A1genes%20La%20Perla/Born%20Flamenco/IRUN0894.jpg" alt="Flamenco" loading="lazy" />
-      <img src="icons/Im%C3%A1genes%20La%20Perla/Born%20Flamenco/IRUN2775.jpg" alt="Flamenco" loading="lazy" />
-      <img src="icons/Im%C3%A1genes%20La%20Perla/Barcelona%20Guitar%20Trio/Banner_BCN_GUITAR_TRIO_624x696px.jpg" alt="Barcelona Guitar Trio" loading="lazy" />
-      <img src="icons/Im%C3%A1genes%20La%20Perla/Born%20Flamenco/IRUN4225.jpg" alt="Flamenco" loading="lazy" />
-    </div>
-  </section>
-
-  <!-- VÍDEOS -->
-  <section class="videos reveal">
-    <div class="container narrow text-center">
-      <p class="section-label" data-i18n="videos_label"></p>
-      <h2 class="section-title" data-i18n="videos_title"></h2>
-      <div class="videos-grid">
-        <div class="video-item">
-          <video controls playsinline preload="metadata" poster="">
-            <source src="icons/Videos%20La%20Perla/video%20la%20perla%201.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <div class="video-item">
-          <video controls playsinline preload="metadata" poster="">
-            <source src="icons/Videos%20La%20Perla/video%20la%20perla%202.mp4" type="video/mp4" />
-          </video>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- MENÚ -->
-  <section class="menu reveal">
-    <div class="container">
-      <p class="section-label" data-i18n="menu_label"></p>
-      <h2 class="section-title" data-i18n="menu_title"></h2>
-      <p class="menu-subtitle" data-i18n="menu_subtitle"></p>
-
-      <!-- Menu Tabs -->
-      <div class="menu-tabs">
-        <button class="menu-tab active" data-menu="cocktail">Menú Cocktail</button>
-        <button class="menu-tab" data-menu="finger">Menú Finger Food</button>
-      </div>
-
-      <!-- COCKTAIL MENU -->
-      <div class="menu-panel active" id="menu-cocktail">
-        <div class="menu-cols menu-cols--3">
-          <div class="menu-col">
-            <h4 class="menu-cat" data-i18n="cocktail_frios_title"></h4>
-            <ul class="menu-list" data-i18n-list="cocktail_frios"></ul>
-          </div>
-          <div class="menu-col">
-            <h4 class="menu-cat" data-i18n="cocktail_calientes_title"></h4>
-            <ul class="menu-list" data-i18n-list="cocktail_calientes"></ul>
-          </div>
-          <div class="menu-col">
-            <h4 class="menu-cat" data-i18n="cocktail_postres_title"></h4>
-            <ul class="menu-list" data-i18n-list="cocktail_postres"></ul>
-          </div>
-        </div>
-        <div class="text-center">
-          <a href="menu-cocktail.html" target="_blank" class="btn-gold" data-i18n="menu_cocktail_download"></a>
-        </div>
-      </div>
-
-      <!-- FINGER FOOD MENU -->
-      <div class="menu-panel" id="menu-finger">
-        <div class="menu-cols menu-cols--3">
-          <div class="menu-col">
-            <h4 class="menu-cat" data-i18n="finger_compartir_title"></h4>
-            <ul class="menu-list" data-i18n-list="finger_compartir"></ul>
-          </div>
-          <div class="menu-col">
-            <h4 class="menu-cat" data-i18n="finger_principal_title"></h4>
-            <ul class="menu-list" data-i18n-list="finger_principal"></ul>
-          </div>
-          <div class="menu-col">
-            <h4 class="menu-cat" data-i18n="finger_postre_title"></h4>
-            <ul class="menu-list" data-i18n-list="finger_postre"></ul>
-          </div>
-        </div>
-        <div class="text-center">
-          <a href="menu-finger-food.html" target="_blank" class="btn-gold" data-i18n="menu_finger_download"></a>
-        </div>
-      </div>
-
-      <p class="menu-nota" data-i18n="menu_nota"></p>
-      <div class="menu-photos-row">
-        <img src="icons/Im%C3%A1genes%20La%20Perla/Cenas%20-%20La%20Perla/cena%201.jpeg" alt="Cena La Perla del Born" loading="lazy" />
-        <img src="icons/Im%C3%A1genes%20La%20Perla/Cenas%20-%20La%20Perla/cena%202.jpeg" alt="Cena La Perla del Born" loading="lazy" />
-        <img src="icons/Im%C3%A1genes%20La%20Perla/Cenas%20-%20La%20Perla/cena%204.jpeg" alt="Cena La Perla del Born" loading="lazy" />
-      </div>
-    </div>
-  </section>
-
-  <!-- EL LOCAL -->
-  <section class="local-gallery reveal">
-    <div class="container">
-      <p class="section-label" data-i18n="local_label"></p>
-      <h2 class="section-title" data-i18n="local_title"></h2>
-      <div class="gallery gallery--local">
-        <img src="icons/Im%C3%A1genes%20La%20Perla/Local%20-%20La%20Perla/mesita.JPG" alt="La Perla del Born" loading="lazy" />
-        <img src="icons/Im%C3%A1genes%20La%20Perla/Local%20-%20La%20Perla/LaPerladelBorn108.jpg" alt="La Perla del Born" loading="lazy" />
-        <img src="icons/Im%C3%A1genes%20La%20Perla/Local%20-%20La%20Perla/IRUN4326.jpg" alt="La Perla del Born" loading="lazy" />
-        <img src="icons/Im%C3%A1genes%20La%20Perla/Local%20-%20La%20Perla/IRUN4338.jpg" alt="La Perla del Born" loading="lazy" />
-        <img src="icons/Im%C3%A1genes%20La%20Perla/Local%20-%20La%20Perla/IRUN3000.jpg" alt="La Perla del Born" loading="lazy" />
-        <img src="icons/Im%C3%A1genes%20La%20Perla/Local%20-%20La%20Perla/IRUN4331.jpg" alt="La Perla del Born" loading="lazy" />
-        <img src="icons/Im%C3%A1genes%20La%20Perla/Local%20-%20La%20Perla/01868b9b-c4ab-49d2-b861-1dd8ca110b18.JPG" alt="La Perla del Born" loading="lazy" />
-        <img src="icons/Im%C3%A1genes%20La%20Perla/Bar%20-%20La%20Perla/LaPerladelBorn95.jpg" alt="La Perla del Born" loading="lazy" />
-        <img src="icons/Im%C3%A1genes%20La%20Perla/Bar%20-%20La%20Perla/Cocteles/coctelWS.jpeg" alt="Cóctel La Perla del Born" loading="lazy" />
-      </div>
-    </div>
-  </section>
-
-  <!-- REVIEWS -->
-  <section class="reviews reveal">
-    <div class="container narrow text-center">
-      <p class="section-label" data-i18n="reviews_label"></p>
-      <h2 class="section-title" data-i18n="reviews_title"></h2>
-      <p class="reviews-score">⭐⭐⭐⭐⭐</p>
-      <p class="reviews-text" data-i18n="reviews_text"></p>
-
-      <!-- REVIEWS REALES -->
-      <div class="reviews-cards">
-        <div class="review-card">
-          <p class="review-preview">"Experiencia inolvidable en La Perla del Born... El homenaje a Paco de Lucía fue sencillamente emocionante."</p>
-          <div class="review-full" style="display:none;">
-            <p>Hace solo un ratito vivimos una experiencia inolvidable en La Perla del Born, un espacio con muchísimo encanto y una atmósfera perfecta para disfrutar de la música en directo. Cogimos entradas VIP y fue una maravilla poder sentarnos delante y vivir el espectáculo tan de cerca. Además, todo el equipo fue súper amable y atento en todo momento, haciendo que la experiencia fuese todavía más especial. El homenaje a Paco de Lucía fue sencillamente emocionante. El cuarteto formado por los guitarristas Alí Arango, Xavier Coll y Luis Robisco junto al percusionista lograron una fusión magistral entre guitarra española y flamenca, creando momentos llenos de sensibilidad y fuerza. La energía del baile fue espectacular, especialmente la bailarina, que me encantó por la pasión, elegancia y emoción que transmitía en cada actuación. Una noche llena de talento, arte y emoción en un lugar íntimo y acogedor. Totalmente recomendable.</p>
-          </div>
-          <button class="review-toggle" onclick="this.previousElementSibling.style.display=this.previousElementSibling.style.display==='none'?'block':'none'; this.textContent=this.previousElementSibling.style.display==='none'?'Leer más':'Cerrar'">Leer más</button>
-          <p class="review-author">— Vanesa Sánchez</p>
-        </div>
-
-        <div class="review-card">
-          <p class="review-preview">"Experiencia transformadora, realmente emotiva y conmovedora. Una presencia escénica con una potencia que nos llegó al alma."</p>
-          <div class="review-full" style="display:none;">
-            <p>Experiencia transformadora, realmente emotiva y conmovedora. Una presencia escénica con una potencia que nos llegó al alma. Cada uno sintiendo plenamente su rol y una integración en conjunto alucinante. Brillante en todos los sentidos. Sentimos las raíces españolas en todo su esplendor. Volveremos!! Una perla realmente en pleno Born. Ampliamente recomendable 10/10.</p>
-          </div>
-          <button class="review-toggle" onclick="this.previousElementSibling.style.display=this.previousElementSibling.style.display==='none'?'block':'none'; this.textContent=this.previousElementSibling.style.display==='none'?'Leer más':'Cerrar'">Leer más</button>
-          <p class="review-author">— Lucia Daicz</p>
-        </div>
-
-        <div class="review-card">
-          <p class="review-preview">"Local precioso, con mucho encanto y acogedor, trato exquisito y amable de su personal y muy buen espectáculo, nos encantó!"</p>
-          <div class="review-full" style="display:none;">
-            <p>Local precioso, con mucho encanto y acogedor, trato exquisito y amable de su personal y muy buen espectáculo, nos encantó! Muy buenos músicos, una voz preciosa de la cantante y pasión absoluta de sus bailarines. Felicidades y muchos éxitos.</p>
-          </div>
-          <button class="review-toggle" onclick="this.previousElementSibling.style.display=this.previousElementSibling.style.display==='none'?'block':'none'; this.textContent=this.previousElementSibling.style.display==='none'?'Leer más':'Cerrar'">Leer más</button>
-          <p class="review-author">— Mónica L.</p>
-        </div>
-      </div>
-
-      <a href="https://www.google.es/maps/place/La+Perla+del+Born/@41.3851446,2.179966,17z/data=!3m1!4b1!4m6!3m5!1s0x12a4a3ef47cc632b:0xd0ab45f0a627c3f6!8m2!3d41.3851406!4d2.1825409!16s%2Fg%2F11z2sn2bsv" target="_blank" class="btn-gold" data-i18n="reviews_cta"></a>
-    </div>
-  </section>
-
-  <!-- PACKS -->
-  <section class="precio reveal">
-    <div class="container narrow text-center">
-      <p class="section-label" data-i18n="precio_label"></p>
-      <h2 class="section-title" data-i18n="precio_title"></h2>
-      <p class="precio-incluye" data-i18n="precio_incluye"></p>
-      <p class="precio-nota" data-i18n="precio_nota"></p>
-      <a href="#contacto" class="btn-gold" data-i18n="precio_cta"></a>
-    </div>
-  </section>
-
-  <!-- CONTACTO -->
-  <section class="contacto reveal" id="contacto">
-    <div class="container narrow text-center">
-      <p class="section-label" data-i18n="contacto_label"></p>
-      <h2 class="section-title" data-i18n="contacto_title"></h2>
-      <p class="contacto-text" data-i18n="contacto_text"></p>
-      <div class="contacto-datos">
-        <a href="mailto:carol@poemasl.com" class="contacto-link">carol@poemasl.com</a>
-        <a href="tel:+34677321358" class="contacto-link">+34 677 321 358</a>
-        <a href="https://www.google.es/maps/place/La+Perla+del+Born/@41.3851446,2.179966,17z/data=!3m1!4b1!4m6!3m5!1s0x12a4a3ef47cc632b:0xd0ab45f0a627c3f6!8m2!3d41.3851406!4d2.1825409!16s%2Fg%2F11z2sn2bsv" target="_blank" class="contacto-link">Carrer dels Flassaders, 42 · Ciutat Vella · 08003 Barcelona</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- BACK TO TOP -->
-  <a href="#" class="back-to-top" id="backToTop" aria-label="Volver arriba">↑</a>
+  </main>
 
   <!-- FOOTER -->
-  <footer class="footer">
-    <img src="icons/Logos La Perla/5.2 Logo blanco_fondo transparente_La Perla del Born.png" alt="La Perla del Born" class="footer-logo" />
-    <p class="footer-text">El Born · Barcelona</p>
-    <p class="footer-copy">© 2026 La Perla del Born</p>
+  <footer class="landing-footer">
+    <p>Carrer dels Flassaders, 42 · El Born · Barcelona</p>
+    <p style="margin-top:8px;"><a href="mailto:carol@poemasl.com">carol@poemasl.com</a> · <a href="tel:+34677321358">+34 677 321 358</a></p>
+    <p style="margin-top:16px;">© 2026 La Perla del Born</p>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <script>
+    const t = {
+      es: {
+        subtitle: "Música en directo en el corazón del Born",
+        privLabel: "Eventos privados",
+        privTitle: "Tu noche exclusiva",
+        privText: "Cierra el espacio para tu equipo o clientes. Cena, espectáculo de flamenco en vivo y una experiencia completamente privada.",
+        privBtn: "Descubrir",
+        concLabel: "Conciertos para grupos",
+        concTitle: "Trae a tu grupo",
+        concText: "Flamenco y guitarra en directo cada semana. Reserva asientos para tu grupo y ofrece una experiencia cultural única en Barcelona.",
+        concBtn: "Descubrir",
+      },
+      en: {
+        subtitle: "Live music in the heart of El Born",
+        privLabel: "Private events",
+        privTitle: "Your exclusive evening",
+        privText: "Book the entire venue for your team or clients. Dinner, live flamenco and a fully private experience.",
+        privBtn: "Discover",
+        concLabel: "Concerts for groups",
+        concTitle: "Bring your group",
+        concText: "Live flamenco and guitar every week. Reserve seats for your group and offer a unique cultural experience in Barcelona.",
+        concBtn: "Discover",
+      }
+    };
+
+    let lang = 'es';
+
+    function setLang(l) {
+      lang = l;
+      document.querySelectorAll('.lang-btn').forEach(b => {
+        b.classList.toggle('active', b.getAttribute('data-lang') === l);
+      });
+      apply();
+    }
+
+    function apply() {
+      const d = t[lang];
+      document.getElementById('landingSubtitle').textContent = d.subtitle;
+      document.getElementById('privLabel').textContent = d.privLabel;
+      document.getElementById('privTitle').textContent = d.privTitle;
+      document.getElementById('privText').textContent = d.privText;
+      document.getElementById('privBtn').textContent = d.privBtn;
+      document.getElementById('concLabel').textContent = d.concLabel;
+      document.getElementById('concTitle').textContent = d.concTitle;
+      document.getElementById('concText').textContent = d.concText;
+      document.getElementById('concBtn').textContent = d.concBtn;
+    }
+
+    // Detect lang from URL param
+    const p = new URLSearchParams(window.location.search).get('lang');
+    if (p && t[p]) { lang = p; document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.getAttribute('data-lang') === lang)); }
+    apply();
+  </script>
 </body>
 </html>
