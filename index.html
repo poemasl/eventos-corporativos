@@ -89,7 +89,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 24px;
-      max-width: 1100px;
+      max-width: 1300px;
       margin: 0 auto;
       padding: 48px 24px 80px;
     }
@@ -97,24 +97,24 @@
     .split-card {
       position: relative;
       overflow: hidden;
-      aspect-ratio: 16/9;
-      border-radius: 8px;
-      cursor: pointer;
       text-decoration: none;
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease;
     }
 
     .split-card:hover {
       transform: translateY(-3px);
-      box-shadow: 0 12px 40px rgba(201, 168, 76, 0.15);
     }
 
-    .split-card img {
-      position: absolute;
-      inset: 0;
+    .split-img-wrap {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 16/9;
+      border-radius: 16px;
+    }
+
+    .split-img-wrap img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -122,37 +122,48 @@
       filter: brightness(0.7) saturate(1.1);
     }
 
-    .split-card:hover img {
+    .split-card:hover .split-img-wrap img {
       transform: scale(1.05);
       filter: brightness(0.8) saturate(1.2);
     }
 
-    .split-card.card-conciertos img {
+    .split-card.card-conciertos .split-img-wrap img {
       filter: brightness(0.85) saturate(1.3);
     }
 
-    .split-card.card-conciertos:hover img {
+    .split-card.card-conciertos:hover .split-img-wrap img {
       transform: scale(1.05);
       filter: brightness(0.9) saturate(1.4);
     }
 
-    .split-card::after {
+    .split-img-wrap::after {
       content: '';
       position: absolute;
       inset: 0;
       background: linear-gradient(
         to top,
-        rgba(0,0,0,0.8) 0%,
-        rgba(0,0,0,0.35) 45%,
-        rgba(0,0,0,0.05) 100%
+        rgba(0,0,0,0.7) 0%,
+        rgba(0,0,0,0.15) 50%,
+        transparent 100%
       );
       pointer-events: none;
     }
 
-    .split-content {
-      position: relative;
+    .split-img-title {
+      position: absolute;
+      bottom: 20px;
+      left: 24px;
       z-index: 2;
-      padding: 40px 32px;
+      font-family: var(--font-serif);
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 300;
+      color: var(--white);
+      line-height: 1.2;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+    }
+
+    .split-content {
+      padding: 20px 4px 0;
     }
 
     .split-label {
@@ -160,19 +171,14 @@
     }
 
     .split-title {
-      font-family: var(--font-serif);
-      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-      font-weight: 300;
-      color: var(--white);
-      line-height: 1.2;
-      margin-bottom: 16px;
+      display: none;
     }
 
     .split-text {
       font-size: 0.85rem;
       color: var(--white-dim);
       line-height: 1.8;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
 
     .split-btn {
@@ -221,14 +227,14 @@
     @media (max-width: 700px) {
       .split {
         grid-template-columns: 1fr;
-        gap: 16px;
+        gap: 32px;
         padding: 24px 16px 60px;
       }
-      .split-card {
-        aspect-ratio: 3/2;
+      .split-img-wrap {
+        aspect-ratio: 16/9;
       }
       .split-content {
-        padding: 24px 24px;
+        padding: 16px 4px 0;
       }
       .landing-header {
         padding: 70px 20px 24px;
@@ -269,21 +275,23 @@
 
     <!-- EVENTOS PRIVADOS -->
     <a href="privados/" class="split-card fade-in">
-      <img src="icons/Im%C3%A1genes%20La%20Perla/Born%20Flamenco/IRUN0885.jpg" alt="Eventos privados en La Perla del Born" />
+      <div class="split-img-wrap">
+        <img src="icons/Im%C3%A1genes%20La%20Perla/Born%20Flamenco/IRUN0885.jpg" alt="Eventos privados en La Perla del Born" />
+        <span class="split-img-title" id="privTitle"></span>
+      </div>
       <div class="split-content">
-        <p class="split-label" id="privLabel"></p>
-        <h2 class="split-title" id="privTitle"></h2>
         <p class="split-text" id="privText"></p>
         <span class="split-btn" id="privBtn"></span>
       </div>
     </a>
 
-    <!-- CONCIERTOS PARA GRUPOS -->
+    <!-- CADA NOCHE, EN DIRECTO -->
     <a href="conciertos/" class="split-card card-conciertos fade-in">
-      <img src="icons/Im%C3%A1genes%20La%20Perla/Barcelona%20Guitar%20Trio/LaPerladelBorn61.jpg" alt="Conciertos para grupos en La Perla del Born" />
+      <div class="split-img-wrap">
+        <img src="icons/Im%C3%A1genes%20La%20Perla/Barcelona%20Guitar%20Trio/LaPerladelBorn61.jpg" alt="Conciertos en La Perla del Born" />
+        <span class="split-img-title" id="concTitle"></span>
+      </div>
       <div class="split-content">
-        <p class="split-label" id="concLabel"></p>
-        <h2 class="split-title" id="concTitle"></h2>
         <p class="split-text" id="concText"></p>
         <span class="split-btn" id="concBtn"></span>
       </div>
@@ -301,35 +309,35 @@
   <script>
     const t = {
       es: {
-        subtitle: "Música en directo en el corazón del Born",
+        subtitle: "Flamenco en un espacio íntimo y especial en el corazón del Born de Barcelona",
         privLabel: "",
         privTitle: "Eventos Privados",
         privText: "Cierra el espacio para tu equipo o clientes. Cena, espectáculo de flamenco en vivo y una experiencia completamente privada.",
         privBtn: "Descubrir",
         concLabel: "",
-        concTitle: "Flamenco en Barcelona",
+        concTitle: "Cada Noche, en Directo",
         concText: "Flamenco y guitarra en directo en el corazón del Born. Espectáculos de miércoles a domingo en un espacio íntimo con bar de cócteles.",
         concBtn: "Descubrir",
       },
       en: {
-        subtitle: "Live music in the heart of El Born",
+        subtitle: "Flamenco in an intimate and special venue in the heart of El Born, Barcelona",
         privLabel: "",
         privTitle: "Private Events",
         privText: "Book the entire venue for your team or clients. Dinner, live flamenco and a fully private experience.",
         privBtn: "Discover",
         concLabel: "",
-        concTitle: "Flamenco in Barcelona",
+        concTitle: "Every Night, Live",
         concText: "Live flamenco and guitar in the heart of El Born. Shows from Wednesday to Sunday in an intimate venue with a cocktail bar.",
         concBtn: "Discover",
       },
       ca: {
-        subtitle: "Música en directe al cor del Born",
+        subtitle: "Flamenc en un espai íntim i especial al cor del Born de Barcelona",
         privLabel: "",
         privTitle: "Esdeveniments Privats",
         privText: "Tanca l'espai per al teu equip o clients. Sopar, espectacle de flamenc en directe i una experiència completament privada.",
         privBtn: "Descobrir",
         concLabel: "",
-        concTitle: "Flamenc a Barcelona",
+        concTitle: "Cada Nit, en Directe",
         concText: "Flamenc i guitarra en directe al cor del Born. Espectacles de dimecres a diumenge en un espai íntim amb bar de còctels.",
         concBtn: "Descobrir",
       }
@@ -348,11 +356,9 @@
     function apply() {
       const d = t[lang];
       document.getElementById('landingSubtitle').textContent = d.subtitle;
-      document.getElementById('privLabel').textContent = d.privLabel;
       document.getElementById('privTitle').textContent = d.privTitle;
       document.getElementById('privText').textContent = d.privText;
       document.getElementById('privBtn').textContent = d.privBtn;
-      document.getElementById('concLabel').textContent = d.concLabel;
       document.getElementById('concTitle').textContent = d.concTitle;
       document.getElementById('concText').textContent = d.concText;
       document.getElementById('concBtn').textContent = d.concBtn;
