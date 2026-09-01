@@ -324,6 +324,17 @@
     .contacto-datos {
       display: flex; flex-direction: column; align-items: center; gap: 12px;
     }
+    .grupos-box {
+      background: rgba(201,168,76,0.1); border: 1px solid var(--gold);
+      border-radius: 8px; padding: 28px 36px; margin: 0 auto 40px; max-width: 620px;
+    }
+    .grupos-box h3 {
+      font-family: var(--font-serif); font-size: 1.4rem; font-weight: 400;
+      color: var(--gold-light); margin-bottom: 10px;
+    }
+    .grupos-box p {
+      font-size: 0.9rem; color: var(--white-dim); line-height: 1.7;
+    }
     .contacto-link {
       color: var(--gold); text-decoration: none; font-family: var(--font-sans);
       font-size: 0.95rem; font-weight: 400; letter-spacing: 0.08em; transition: color 0.25s;
@@ -594,6 +605,10 @@
       <p class="section-label" data-i18n="contacto_label"></p>
       <h2 class="section-title" data-i18n="contacto_title"></h2>
       <p class="contacto-text" data-i18n="contacto_text"></p>
+      <div class="grupos-box">
+        <h3 data-i18n="grupos_title"></h3>
+        <p data-i18n="grupos_text"></p>
+      </div>
       <div class="contacto-datos">
         <a href="mailto:carol@poemasl.com" class="contacto-link">carol@poemasl.com</a>
         <a href="tel:+34677321358" class="contacto-link">+34 677 321 358</a>
@@ -674,7 +689,9 @@
 
       contacto_label: "Hablemos",
       contacto_title: "¿Quieres venir?",
-      contacto_text: "Escríbenos para reservar tus entradas o para cualquier consulta. Si vienes con un grupo, te preparamos condiciones especiales.",
+      contacto_text: "Escríbenos para reservar tus entradas o para cualquier consulta.",
+      grupos_title: "Condiciones especiales para grupos",
+      grupos_text: "Tour operadores, agencias y guías: trabajamos con condiciones y comisiones a medida. Contáctanos para diseñar la mejor propuesta para tu grupo.",
     },
 
     en: {
@@ -734,7 +751,9 @@
 
       contacto_label: "Get in touch",
       contacto_title: "Want to come?",
-      contacto_text: "Write to us to book your tickets or for any enquiry. If you're coming with a group, we'll arrange special conditions.",
+      contacto_text: "Write to us to book your tickets or for any enquiry.",
+      grupos_title: "Special conditions for groups",
+      grupos_text: "Tour operators, agencies and guides: we work with tailored conditions and commissions. Get in touch to design the best proposal for your group.",
     },
 
     ca: {
@@ -794,7 +813,9 @@
 
       contacto_label: "Parlem",
       contacto_title: "Vols venir?",
-      contacto_text: "Escriu-nos per reservar les teves entrades o per a qualsevol consulta. Si vens amb un grup, et preparem condicions especials.",
+      contacto_text: "Escriu-nos per reservar les teves entrades o per a qualsevol consulta.",
+      grupos_title: "Condicions especials per a grups",
+      grupos_text: "Tour operadors, agències i guies: treballem amb condicions i comissions a mida. Contacta'ns per dissenyar la millor proposta per al teu grup.",
     }
   };
 
