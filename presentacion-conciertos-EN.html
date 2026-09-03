@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Perla del Born · Live Concerts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --gold: #C9A84C;
+      --gold-light: #E8C96A;
+      --black: #0A0A0A;
+      --dark: #111111;
+      --dark-2: #1A1A1A;
+      --white: #F5F0E8;
+      --white-dim: rgba(245, 240, 232, 0.75);
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Montserrat', sans-serif;
+    }
+    @page { size: A4 landscape; margin: 0; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 14px; }
+    body {
+      background: var(--black); color: var(--white);
+      font-family: var(--font-sans); font-weight: 300; line-height: 1.6;
+      -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    }
+    .slide {
+      width: 297mm; height: 210mm; padding: 40px 56px;
+      page-break-after: always; position: relative; overflow: hidden;
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .slide:last-child { page-break-after: avoid; }
+    .slide-dark { background: var(--dark); }
+    .slide-black { background: var(--black); }
+    .slide-dark2 { background: var(--dark-2); }
+    .slide-footer {
+      position: absolute; bottom: 16px; right: 40px;
+      font-size: 0.5rem; color: rgba(245,240,232,0.2); letter-spacing: 0.1em;
+    }
+    .slide-label {
+      font-family: var(--font-sans); font-size: 0.75rem; font-weight: 500;
+      letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px;
+    }
+    .slide-title {
+      font-family: var(--font-serif); font-size: 2.6rem; font-weight: 300;
+      color: var(--white); margin-bottom: 24px; line-height: 1.2;
+    }
+    .slide-text { font-size: 1.05rem; color: var(--white-dim); line-height: 1.9; max-width: 850px; }
+    .slide-text strong { color: var(--white); font-weight: 500; }
+
+    .slide-cover { text-align: center; align-items: center; padding: 0; }
+    .cover-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.5) saturate(1); }
+    .cover-content { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; }
+    .cover-logo { height: 180px; margin-bottom: 28px; filter: drop-shadow(0 2px 16px rgba(0,0,0,0.6)); }
+    .cover-content h1 {
+      font-family: var(--font-sans); font-size: 2rem; font-weight: 500;
+      letter-spacing: 0.15em; text-transform: uppercase; color: var(--white);
+      margin-bottom: 10px; text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+    }
+    .cover-content .cover-dias {
+      font-family: var(--font-serif); font-size: 1.8rem; font-style: italic;
+      color: var(--gold); margin-bottom: 28px; text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+    }
+    .cover-sub {
+      font-family: var(--font-serif); font-size: 1.6rem; font-weight: 300;
+      color: var(--white); max-width: 720px; line-height: 1.4; text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+    }
+
+    .photo-row { display: grid; gap: 6px; margin-top: 20px; }
+    .photo-row img { width: 100%; height: 100%; object-fit: cover; border-radius: 4px; filter: brightness(1.12) saturate(1.05); }
+    .photo-row-3 { grid-template-columns: repeat(3, 1fr); }
+    .photo-row-3 img { aspect-ratio: 4/3; }
+
+    .two-col-img { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; margin-top: 20px; }
+    .col-img-wrap { overflow: hidden; border-radius: 6px; aspect-ratio: 4/3; }
+    .col-img-wrap img { width: 100%; height: 100%; object-fit: cover; filter: brightness(1.1) saturate(1.05); }
+    .col-text { margin-top: 16px; }
+    .col-text h3 { font-family: var(--font-serif); font-size: 1.7rem; font-weight: 400; color: var(--white); margin-bottom: 10px; }
+    .col-text p { font-size: 1rem; color: var(--white-dim); line-height: 1.8; }
+    .col-text .detail { font-size: 0.92rem; color: var(--white-dim); margin-top: 14px; line-height: 1.8; }
+    .col-text .detail strong { color: var(--gold); font-weight: 500; }
+
+    .horario-center { text-align: center; margin-top: 32px; font-family: var(--font-serif); font-size: 1.5rem; font-weight: 400; color: var(--gold); }
+
+    .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; margin-top: 28px; }
+    .three-col .item { border-top: 1px solid rgba(201,168,76,0.25); padding-top: 16px; }
+    .three-col .item h4 { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 400; color: var(--white); margin-bottom: 10px; }
+    .three-col .item p { font-size: 0.95rem; color: var(--white-dim); line-height: 1.7; }
+
+    .steps { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; margin-top: 28px; text-align: center; }
+    .step-num { font-family: var(--font-serif); font-size: 3rem; font-weight: 300; color: var(--gold); margin-bottom: 10px; }
+    .step h4 { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 400; color: var(--white); margin-bottom: 10px; }
+    .step p { font-size: 0.95rem; color: var(--white-dim); line-height: 1.7; }
+
+    .reviews-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-top: 20px; }
+    .review-block { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.15); border-radius: 6px; padding: 24px 26px; }
+    .review-block p { font-family: var(--font-serif); font-size: 1.15rem; font-style: italic; color: var(--white-dim); line-height: 1.7; }
+    .review-block .author { font-family: var(--font-sans); font-size: 0.85rem; font-weight: 500; color: var(--gold); margin-top: 14px; font-style: normal; }
+    .stars { font-size: 1.6rem; margin-bottom: 16px; }
+
+    .contact-center { text-align: center; }
+    .contacto-dato { font-family: var(--font-sans); font-size: 1.3rem; color: var(--gold); margin-bottom: 12px; letter-spacing: 0.05em; }
+    .contacto-dir { font-size: 1.05rem; color: var(--white-dim); font-style: italic; margin-top: 20px; }
+    .contacto-web { font-size: 1rem; color: var(--gold); margin-top: 16px; letter-spacing: 0.08em; }
+
+    .grupos-box {
+      background: rgba(201,168,76,0.1); border: 1px solid var(--gold);
+      border-radius: 8px; padding: 28px 36px; margin: 0 auto 36px; max-width: 680px;
+    }
+    .grupos-box h3 {
+      font-family: var(--font-serif); font-size: 1.5rem; font-weight: 400;
+      color: var(--gold-light); margin-bottom: 10px;
+    }
+    .grupos-box p { font-size: 1rem; color: var(--white-dim); line-height: 1.7; }
+  </style>
+</head>
+<body>
+
+  <!-- SLIDE 1: COVER -->
+  <div class="slide slide-cover slide-black">
+    <img src="pdf-assets/born-flamenco-2775.jpg" alt="" class="cover-bg" />
+    <div class="cover-content">
+      <img src="pdf-assets/logo.png" alt="La Perla del Born" class="cover-logo" />
+      <h1>Live Flamenco</h1>
+      <p class="cover-dias">Wednesday to Sunday</p>
+      <p class="cover-sub">Concerts in the new landmark venue in the heart of El Born, Barcelona</p>
+    </div>
+    <span class="slide-footer">La Perla del Born · eventos.laperladelborn.com/conciertos</span>
+  </div>
+
+  <!-- SLIDE 2: THE SHOWS -->
+  <div class="slide slide-dark">
+    <p class="slide-label">The shows</p>
+    <p class="slide-title">Two shows, one emotion</p>
+    <div class="two-col-img">
+      <div>
+        <div class="col-img-wrap"><img src="pdf-assets/born-flamenco-2439.jpg" alt="Born Flamenco" /></div>
+        <div class="col-text">
+          <h3>Born Flamenco</h3>
+          <p><strong>Show directed by José Manuel Álvarez.</strong> Pure, intimate flamenco. Guitar, piano, dance and singing in a close, direct format that connects with the soul of authentic flamenco.</p>
+          <div class="detail"><strong>Duration:</strong> 1 hour · <strong>Artists:</strong> Guitar, piano, dance and singing</div>
+        </div>
+      </div>
+      <div>
+        <div class="col-img-wrap"><img src="pdf-assets/bgt-banner.jpg" alt="Barcelona Guitar Trio" /></div>
+        <div class="col-text">
+          <h3>Barcelona Guitar Trio & Dance</h3>
+          <p><strong>A tribute to Paco de Lucía.</strong> A journey through the master's work with breathtaking technical mastery and stage presence that leaves you speechless.</p>
+          <div class="detail"><strong>Duration:</strong> 1 hour · <strong>Artists:</strong> 3 guitars, dance and percussion</div>
+        </div>
+      </div>
+    </div>
+    <div class="horario-center">Wednesday to Sunday · 6pm and 8pm</div>
+    <span class="slide-footer">La Perla del Born</span>
+  </div>
+
+  <!-- SLIDE 3: THE VENUE -->
+  <div class="slide slide-black">
+    <p class="slide-label">The venue</p>
+    <p class="slide-title">A soulful corner in El Born</p>
+    <div class="photo-row photo-row-3">
+      <img src="pdf-assets/local-4327.jpg" alt="Interior" />
+      <img src="pdf-assets/local-4335.jpg" alt="Room" />
+      <img src="pdf-assets/local-3000.jpg" alt="Stage" />
+    </div>
+    <p class="slide-text" style="margin-top:20px;">An intimate room seating up to <strong>100 people</strong>, with its own stage, a bar serving <strong>craft cocktails</strong>, and an atmosphere that envelops you from the very first moment. In the heart of El Born, steps away from the <strong>Picasso Museum</strong> and <strong>Santa María del Mar</strong>.</p>
+    <span class="slide-footer">La Perla del Born</span>
+  </div>
+
+  <!-- SLIDE 4: BAR & ATMOSPHERE -->
+  <div class="slide slide-dark2">
+    <p class="slide-label">The atmosphere</p>
+    <p class="slide-title">Bar, cocktails and more</p>
+    <div class="photo-row photo-row-3">
+      <img src="pdf-assets/bar-12.jpg" alt="Bar" />
+      <img src="pdf-assets/coctel.jpg" alt="Cocktails" />
+      <img src="pdf-assets/bar-95.jpg" alt="Atmosphere" />
+    </div>
+    <p class="slide-text" style="margin-top:20px;"><strong>Craft cocktails, wines and cava</strong> to enjoy before and after the show, at your own pace. A venue with its own personality, thoughtful décor and an enveloping atmosphere.</p>
+    <span class="slide-footer">La Perla del Born</span>
+  </div>
+
+  <!-- SLIDE 5: WHY LA PERLA -->
+  <div class="slide slide-black">
+    <p class="slide-label">The experience</p>
+    <p class="slide-title">Why La Perla del Born</p>
+    <div class="three-col">
+      <div class="item"><h4>In the heart of El Born</h4><p>Next to the Picasso Museum, Santa María del Mar and Paseo del Born. Easy walking access from anywhere in the city.</p></div>
+      <div class="item"><h4>Top-level shows</h4><p>Professional artists, careful production and an intimate format that moves any audience.</p></div>
+      <div class="item"><h4>Flexible bookings</h4><p>Buy your tickets online or book by phone and email. For groups, special conditions available.</p></div>
+      <div class="item"><h4>Cocktail bar</h4><p>Craft cocktails, wines and cava before and after the show.</p></div>
+      <div class="item"><h4>5 stars on Google</h4><p>5 out of 5 ratings from day one. Guests highlight the artistic quality and the unique atmosphere.</p></div>
+      <div class="item"><h4>Intimate and authentic</h4><p>Thoughtful décor and an enveloping atmosphere. Far from the crowded tourist circuits.</p></div>
+    </div>
+    <span class="slide-footer">La Perla del Born</span>
+  </div>
+
+  <!-- SLIDE 6: REVIEWS -->
+  <div class="slide slide-dark">
+    <p class="slide-label">Reviews</p>
+    <p class="slide-title">What our guests say</p>
+    <p class="stars">⭐⭐⭐⭐⭐</p>
+    <div class="reviews-row">
+      <div class="review-block"><p>"An unforgettable experience at La Perla del Born... The tribute to Paco de Lucía was simply moving."</p><p class="author">— Vanesa Sánchez</p></div>
+      <div class="review-block"><p>"A transformative experience, truly emotional and moving. A stage presence with a power that reached our souls."</p><p class="author">— Lucia Daicz</p></div>
+      <div class="review-block"><p>"Beautiful venue, charming and cosy, exquisite and friendly service, and a great show."</p><p class="author">— Mónica L.</p></div>
+    </div>
+    <div class="photo-row photo-row-3" style="margin-top:24px;">
+      <img src="pdf-assets/born-flamenco-0894.jpg" alt="Flamenco" />
+      <img src="pdf-assets/bgt-61.jpg" alt="Guitar" />
+      <img src="pdf-assets/born-flamenco-3960.jpg" alt="Flamenco" />
+    </div>
+    <span class="slide-footer">La Perla del Born</span>
+  </div>
+
+  <!-- SLIDE 7: HOW IT WORKS -->
+  <div class="slide slide-black">
+    <p class="slide-label">How it works</p>
+    <p class="slide-title">Booking is very simple</p>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><h4>Choose your show</h4><p>Check the calendar and pick the date that suits you best.</p></div>
+      <div class="step"><div class="step-num">2</div><h4>Book your tickets</h4><p>Online, by phone or email. For groups, write to us directly.</p></div>
+      <div class="step"><div class="step-num">3</div><h4>Enjoy</h4><p>Arrive, order a cocktail at the bar and let the music carry you away.</p></div>
+    </div>
+    <span class="slide-footer">La Perla del Born</span>
+  </div>
+
+  <!-- SLIDE 8: CONTACT -->
+  <div class="slide slide-dark contact-center">
+    <p class="slide-label">Contact</p>
+    <p class="slide-title" style="text-align:center; font-size:3.2rem;">Want to come?</p>
+    <p class="slide-text" style="text-align:center; max-width:600px; margin:0 auto 36px; font-size:1.15rem;">Write to us to book your tickets or for any enquiry.</p>
+
+    <div class="grupos-box">
+      <h3>Special conditions for groups</h3>
+      <p>Tour operators, agencies and guides: we work with tailored conditions and commissions. Get in touch to design the best proposal for your group.</p>
+    </div>
+
+    <p class="contacto-dato">carol@poemasl.com</p>
+    <p class="contacto-dato">+34 677 321 358</p>
+    <p class="contacto-dir">Carrer dels Flassaders, 42 · Ciutat Vella · 08003 Barcelona</p>
+    <p class="contacto-web">eventos.laperladelborn.com/conciertos</p>
+    <span class="slide-footer">La Perla del Born · © 2026</span>
+  </div>
+
+</body>
+</html>

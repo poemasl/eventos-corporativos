@@ -944,6 +944,33 @@ body {
   letter-spacing: 0.1em;
 }
 
+/* ── FOOTER SOCIAL ── */
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin: 4px 0 20px;
+  flex-wrap: wrap;
+}
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--white-dim);
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  transition: color 0.25s;
+}
+.footer-social a:hover { color: var(--gold); }
+.footer-social svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   .pack-grid {

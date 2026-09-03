@@ -65,23 +65,44 @@
 
     /* ── HEADER ── */
     .landing-header {
-      text-align: center;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      max-width: 1300px;
+      margin: 0 auto;
       padding: 80px 24px 40px;
     }
     .landing-logo {
-      height: 140px;
+      height: 170px;
       width: auto;
-      margin-bottom: 28px;
+      flex-shrink: 0;
       filter: drop-shadow(0 2px 20px rgba(0,0,0,0.4));
     }
     .landing-subtitle {
       font-family: var(--font-serif);
-      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+      font-size: clamp(1.3rem, 2.4vw, 2rem);
       font-weight: 300;
       font-style: italic;
       color: var(--white-dim);
-      max-width: 600px;
-      margin: 0 auto;
+      margin: 0;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    /* Cursor del efecto máquina de escribir */
+    .landing-subtitle::after {
+      content: '';
+      display: inline-block;
+      width: 2px;
+      height: 1.1em;
+      margin-left: 2px;
+      background: var(--gold);
+      vertical-align: text-bottom;
+      animation: caretBlink 0.9s step-end infinite;
+    }
+    .landing-subtitle.typing-done::after { opacity: 0; }
+    @keyframes caretBlink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
     }
 
     /* ── SPLIT ── */
@@ -237,7 +258,17 @@
         padding: 16px 4px 0;
       }
       .landing-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
         padding: 70px 20px 24px;
+      }
+      .landing-logo {
+        height: 120px;
+      }
+      .landing-subtitle {
+        white-space: normal;
+        font-size: 1.2rem;
       }
     }
 
@@ -285,10 +316,10 @@
       </div>
     </a>
 
-    <!-- CADA NOCHE, EN DIRECTO -->
-    <a href="conciertos/" class="split-card card-conciertos fade-in">
+    <!-- ALQUILER DEL ESPACIO -->
+    <a href="alquiler/" class="split-card card-conciertos fade-in">
       <div class="split-img-wrap">
-        <img src="icons/Im%C3%A1genes%20La%20Perla/Barcelona%20Guitar%20Trio/LaPerladelBorn61.jpg" alt="Conciertos en La Perla del Born" />
+        <img src="icons/Im%C3%A1genes%20La%20Perla/Local%20-%20La%20Perla/IRUN4327.jpg" alt="Alquiler del espacio en La Perla del Born" />
         <span class="split-img-title" id="concTitle"></span>
       </div>
       <div class="split-content">
@@ -309,36 +340,36 @@
   <script>
     const t = {
       es: {
-        subtitle: "Flamenco en un espacio íntimo y especial en el corazón del Born de Barcelona",
+        subtitle: "Un espacio íntimo y singular en el corazón del Born de Barcelona",
         privLabel: "",
         privTitle: "Eventos Privados",
         privText: "Cierra el espacio para tu equipo o clientes. Cena, espectáculo de flamenco en vivo y una experiencia completamente privada.",
         privBtn: "Descubrir",
         concLabel: "",
-        concTitle: "Cada Noche, en Directo",
-        concText: "Flamenco y guitarra en directo en el corazón del Born. Espectáculos de miércoles a domingo en un espacio íntimo con bar de cócteles.",
+        concTitle: "Alquiler del Espacio",
+        concText: "Un espacio singular en el Born, a medida. Reuniones, teambuildings, conciertos, cursos, catas, presentaciones o premios: tú imaginas, nosotros lo montamos.",
         concBtn: "Descubrir",
       },
       en: {
-        subtitle: "Flamenco in an intimate and special venue in the heart of El Born, Barcelona",
+        subtitle: "An intimate and unique venue in the heart of El Born, Barcelona",
         privLabel: "",
         privTitle: "Private Events",
         privText: "Book the entire venue for your team or clients. Dinner, live flamenco and a fully private experience.",
         privBtn: "Discover",
         concLabel: "",
-        concTitle: "Every Night, Live",
-        concText: "Live flamenco and guitar in the heart of El Born. Shows from Wednesday to Sunday in an intimate venue with a cocktail bar.",
+        concTitle: "Venue Hire",
+        concText: "A one-of-a-kind space in El Born, fully tailored. Meetings, team building, concerts, workshops, tastings, launches or award nights: you imagine it, we make it happen.",
         concBtn: "Discover",
       },
       ca: {
-        subtitle: "Flamenc en un espai íntim i especial al cor del Born de Barcelona",
+        subtitle: "Un espai íntim i singular al cor del Born de Barcelona",
         privLabel: "",
         privTitle: "Esdeveniments Privats",
         privText: "Tanca l'espai per al teu equip o clients. Sopar, espectacle de flamenc en directe i una experiència completament privada.",
         privBtn: "Descobrir",
         concLabel: "",
-        concTitle: "Cada Nit, en Directe",
-        concText: "Flamenc i guitarra en directe al cor del Born. Espectacles de dimecres a diumenge en un espai íntim amb bar de còctels.",
+        concTitle: "Lloguer de l'Espai",
+        concText: "Un espai singular al Born, a mida. Reunions, teambuildings, concerts, cursos, tastos, presentacions o premis: tu ho imagines, nosaltres ho muntem.",
         concBtn: "Descobrir",
       }
     };
@@ -353,9 +384,29 @@
       apply();
     }
 
+    let typeTimer = null;
+
+    function typeSubtitle(text) {
+      const el = document.getElementById('landingSubtitle');
+      if (typeTimer) clearTimeout(typeTimer);
+      el.classList.remove('typing-done');
+      el.textContent = '';
+      let i = 0;
+      const step = () => {
+        el.textContent = text.slice(0, i);
+        if (i < text.length) {
+          i++;
+          typeTimer = setTimeout(step, 45);
+        } else {
+          el.classList.add('typing-done');
+        }
+      };
+      step();
+    }
+
     function apply() {
       const d = t[lang];
-      document.getElementById('landingSubtitle').textContent = d.subtitle;
+      typeSubtitle(d.subtitle);
       document.getElementById('privTitle').textContent = d.privTitle;
       document.getElementById('privText').textContent = d.privText;
       document.getElementById('privBtn').textContent = d.privBtn;

@@ -8,6 +8,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>La Perla del Born · Eventos Privados</title>
+  <style>
+    @media only screen and (max-width: 620px) {
+      .main-table { width: 100% !important; }
+      .body-text { font-size: 18px !important; line-height: 1.8 !important; padding: 20px 24px !important; }
+      .highlights-text { font-size: 17px !important; line-height: 1.9 !important; }
+      .proof-text { font-size: 16px !important; }
+      .closing-text { font-size: 18px !important; padding: 0 24px 30px !important; }
+      .closing-small { font-size: 16px !important; }
+      .footer-text { padding: 20px 24px !important; }
+    }
+  </style>
 </head>
 <body style="margin:0; padding:0; background-color:#f7f5f2; font-family: Georgia, 'Times New Roman', serif;">
 
@@ -17,7 +28,7 @@
       <td align="center" style="padding: 40px 20px;">
 
         <!-- MAIN CONTAINER -->
-        <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" style="background-color:#ffffff; border-radius:4px; overflow:hidden;">
+        <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" style="background-color:#ffffff; border-radius:4px; overflow:hidden;" class="main-table">
 
           <!-- HEADER IMAGE -->
           <tr>
@@ -37,7 +48,7 @@
 
           <!-- BODY -->
           <tr>
-            <td style="padding: 20px 40px 10px; color:#2c2c2c; font-size:16px; line-height:1.7;">
+            <td class="body-text" style="padding: 20px 40px 10px; color:#2c2c2c; font-size:16px; line-height:1.7;">
               <p style="margin:0 0 16px;">Hola {{contact.NOMBRE}},</p>
 
               <p style="margin:0 0 16px;">Me pongo en contacto contigo desde <strong>La Perla del Born</strong>, un espacio exclusivo y elegante en el Born de Barcelona con <strong>espectáculos de flamenco y guitarra española en vivo</strong>.</p>
@@ -51,7 +62,7 @@
             <td style="padding: 10px 40px; color:#2c2c2c; font-size:15px; line-height:1.8;">
               <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#faf8f5; border-radius:4px;">
                 <tr>
-                  <td style="padding:20px; font-size:15px; line-height:1.8; color:#2c2c2c;">
+                  <td class="highlights-text" style="padding:20px; font-size:15px; line-height:1.8; color:#2c2c2c;">
                     <strong style="font-size:14px; text-transform:uppercase; letter-spacing:1px; color:#8b6f47;">Qué ofrecemos</strong><br/><br/>
                     ✦ Espectáculo de flamenco en vivo (1h)<br/>
                     ✦ Posibilidad de local en exclusiva (hasta 100 personas)<br/>
@@ -68,7 +79,7 @@
 
           <!-- SOCIAL PROOF -->
           <tr>
-            <td style="padding: 10px 40px 0; color:#2c2c2c; font-size:14px; line-height:1.7;">
+            <td class="proof-text" style="padding: 10px 40px 0; color:#2c2c2c; font-size:14px; line-height:1.7;">
               <p style="margin:0 0 8px;"><strong>Artistas de primer nivel</strong> — Barcelona Guitar Trio & Dance, aclamados internacionalmente con su homenaje a Paco de Lucía, y Born Flamenco, un espectáculo íntimo de guitarra, baile y cante, dirigido por José Manuel Álvarez.</p>
               <p style="margin:0;"><a href="https://www.google.es/maps/place/La+Perla+del+Born/@41.3851446,2.179966,17z/data=!3m1!4b1!4m6!3m5!1s0x12a4a3ef47cc632b:0xd0ab45f0a627c3f6!8m2!3d41.3851406!4d2.1825409!16s%2Fg%2F11z2sn2bsv" target="_blank" style="color:#8b6f47; text-decoration:none; font-size:13px;">⭐ Ver nuestras reseñas en Google Maps</a></p>
             </td>
@@ -83,10 +94,10 @@
 
           <!-- CLOSING -->
           <tr>
-            <td style="padding: 0 40px 30px; color:#2c2c2c; font-size:16px; line-height:1.7;">
+            <td class="closing-text" style="padding: 0 40px 30px; color:#2c2c2c; font-size:16px; line-height:1.7;">
               <p style="margin:0 0 16px;">Si te interesa o quieres más información, estaré encantada de prepararte una propuesta a medida. Sin compromiso.</p>
 
-              <p style="margin:0 0 16px; font-size:14px; color:#555;">Y si buscas algo diferente — solo el espacio para una cena privada, un cóctel con DJ, piano en vivo u otro tipo de amenización — también podemos elaborar una propuesta adaptada a lo que necesitéis.</p>
+              <p class="closing-small" style="margin:0 0 16px; font-size:14px; color:#555;">Y si buscas algo diferente — solo el espacio para una cena privada, un cóctel con DJ, piano en vivo u otro tipo de amenización — también podemos elaborar una propuesta adaptada a lo que necesitéis.</p>
 
               <p style="margin:0 0 6px;">Un saludo,</p>
               <p style="margin:0; font-weight:bold;">Carol</p>
